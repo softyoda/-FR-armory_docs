@@ -1,25 +1,25 @@
-# Welcome
+# Bienvenue
 
 ![](getting_started/img/intro.jpg)
 
-Build games in Blender - Armory is a game engine with full Blender integration, turning it into a complete game development tool.
+Construire des jeux dans Blender - Armory est un moteur de jeu en intégration complète de Blender, le transformant en un outil de développement de jeu complet.
 
-*Armory is not production ready yet, please consider reading through this manual before you start. We are always looking for more feedback - let us know about the issues you are facing at [GitHub](https://github.com/armory3d/armory/issues).*
+*Armory n'est pas encore prête pour la production, veuillez lire ce manuel avant de commencer. Nous sommes toujours à la recherche d'autres commentaires - faites-nous part des problèmes que vous rencontrez à [GitHub](https://github.com/armory3d/armory/issues).*.
 
 ---
 
-Armory SDK can be used on **Windows**, **Linux** and **macOS**. Projects can be deployed to desktop, web, mobile and consoles.
+Armory SDK peut être utiliser sur **Windows**, **Linux** et **macOS**. Les projets peuvent être déployés sur ordinateur, sur mobile , sur le web, et sur les consoles.
 
-### Get Started
+### Commencer
 
 <img src="./getting_started/img/templ.jpg" width="50%">
 
-- [Download SDK](http://armory3d.org/download.html)
-- [Setup](./getting_started/setup.md)
+- [Télécharger le SDK](http://armory3d.org/download.html)
+- [Installer](./getting_started/setup.md)
 - [Playground Tutorial](./getting_started/playground.md)
 - [Tanks Tutorial](./getting_started/tanks.md)
 
-### Essentials
+### Essentiels
 
 <img src="./getting_started/img/essen.jpg" width="50%">
 
@@ -31,8 +31,8 @@ Armory SDK can be used on **Windows**, **Linux** and **macOS**. Projects can be 
 - [Material Vault](https://github.com/armory3d/material_vault)
 
 ### License
-Armory is distributed under [zlib license](https://github.com/armory3d/armory/blob/master/LICENSE). This means Armory is free to use for any purposes, including development of proprietary closed-source software and selling copies of your work. 
+Armory est distribué sous[licence zlib](https://github.com/armory3d/armory/blob/master/LICENSE). Cela signifie que Armory est libre d'utilisation à toutes fins, y compris le développement de logiciels propriétaires à code source fermé et la vente de copies de votre travail. 
 
-### Contributing
+### Contribuer
 
-Any form of contribution is highly welcome! Please take a look at currently opened [issues](https://github.com/armory3d/armory/issues).
+Toute forme de contribution est la bienvenue ! Veuillez jeter un coup d'oeil à la page [issues](https://github.com/armory3d/armory/issues) sur GitHub.
