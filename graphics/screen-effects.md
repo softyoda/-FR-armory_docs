@@ -1,16 +1,16 @@
-# Screen Effects
+# Effets
 
-This page provides an overview of the graphical screen effects that Armory can provide and visually enhance your projects and create immersion.
+Cette page fournit une vue d'ensemble des effets d'écran graphique que Armory peut fournir et améliorer visuellement vos projets et créer une immersion.
 
-The full list of the various effects that is possible to use in Armory encompasses \(sorted alphabetically\):
+La liste complète des différents effets qu'il est possible d'utiliser dans l'Armurerie comprend \(triés par ordre alphabétique\) :
 
 * [Anti-aliasing](/graphics/antialiasing.md) _\[Separate Article\]_
 * [Auto Exposure](#auto-exposure) 
 * [Bloom](#bloom)
 * [Film Grain](#film-grain)
-* [Fish-Eye](#fish-eye) _\[To be written...\]_
+* [Fish-Eye](#fish-eye) _\[En cours de rédaction......\]_
 * [Global Illumination](/graphics/global_illumination.md) _\[Separate Article\]_
-* [Lens Flares](#lens-flares) \[_To be written..._\]
+* [Lens Flares](#lens-flares) \[_En cours de rédaction......_\]
 * [Lens Textures](#lens-textures)
 * [Letterboxing](#letterboxing)
 * [LUT Colorgrading](#lut-colorgrading)
@@ -19,16 +19,16 @@ The full list of the various effects that is possible to use in Armory encompass
 * [Screen-Space Reflections](#ssr)
 * [Tonemapping](#tonemapping)
 * [Vignette](#vignette)
-* [Volumetric Fog](#volumetric-fog) _\[To be written...\]_
+* [Volumetric Fog](#volumetric-fog) _\[En cours de rédaction......\]_
 * [Volumetric Light](#volumetric-light)
 
-_Please note that some of these effects have their own articles for further documentation._
+_Veuillez noter que certains de ces effets ont leurs propres articles pour plus de documentation.._
 
 ---
 
 ## Auto Exposure {#auto-exposure}
 
-Auto Exposure or Eye Adaption is an effect where the the exposure in a scene is automatically adjusted based on the luminance in a frame. This effect mimicks the ocular ability of the eye to adjust to various levels of darkness and light.
+L'auto exposition ou l'adaptation oculaire est un effet où l'exposition d'une scène est automatiquement ajustée en fonction de la luminance d'une image. Cet effet imite la capacité oculaire de l'œil à s'adapter aux différents niveaux d'obscurité et de lumière.
 
 |  |
 | :--- |
@@ -36,78 +36,78 @@ Auto Exposure or Eye Adaption is an effect where the the exposure in a scene is 
 
 ##### Properties:
 
-Auto Exposure Strength - _Adjusts the strength of the automatic exposure. Settings this value to 1 or more is not recommend, as plain white surfaces in full view becomes completely dark. \[Default: 0.7\]_
+Auto Exposure Strength - _Règle l'intensité de l'exposition automatique. Il n'est pas recommandé de régler cette valeur à 1 ou plus, car les surfaces blanches pleines deviennent complètement sombres. \[Défaut: 0.7\]_
 
-**How to:**
+**Comment faire:**
 
-Toggle the boolean property located at: **Armory Render Path** &gt; **Auto Exposure**.
+Basculer la propriété booléenne située à: **Armory Render Path** &gt; **Auto Exposure**.
 
 ## Bloom {#bloom}
 
-Bloom or Glow is a screen-effect that reproduces artifacts occuring in real world cameras, and helps giving the illusion of bright light seen through a camera. Due to the limitations of typical display sets not supporting HDR \(High Dynamic Range\), the possibility to render exceptionally bright objects is not available and thus clamped to an ordinary white color on SDR \(Standard Dynamic Range\). Despite this, game engines can still take HDR into account in terms of effects, where the HDR values are made available for shaders, with bloom being one of them.
+Le Bloom Glow est un effet d'écran qui reproduit les artefacts qui se produisent dans les caméras du monde réel, et aide à donner l'illusion d'une lumière vive vue à travers une caméra. En raison des limitations des ensembles d'affichage typiques ne supportant pas l'HDR\(High Dynamic Range (Haute dynamique de couleur et de contraste\), la possibilité de rendre des objets exceptionnellement lumineux n'est pas disponible et donc serré à une couleur blanche ordinaire sur SDR \(Standard Dynamic Range\). Malgré cela, les moteurs de jeu peuvent encore prendre en compte les HDR en termes d'effets, où les valeurs HDR sont mises à disposition des shaders, le bloom étant l'une d'entre elles.
 
-With the default settings Armory Engine adds bloom for elements that have a brightness higher than what an SDR display set is capable of rendering \(A value of 1 being equal to white\).  
+Avec les paramètres par défaut, Armory Engine ajoute du bloom pour les éléments dont la luminosité est supérieure à ce qu'un ensemble d'affichage SDR est capable de rendre \(Une valeur de 1 étant égale à blanc\).  
 ![](/graphics/img/se/Bloom_Image.jpg)
 
 _Bloom used in a scene. Note the glow surrounding the bright areas._
 
-##### Properties:
+##### Propriétés:
 
-Threshold - _Sets the delimiting threshold for when the bloom effect is applied. Lower values applies the bloom effect to less bright elements. \[Default: 1\]_
+Threshold - _Définit le seuil de délimitation pour l'application de l'effet de bloom. Des valeurs plus basses appliquent l'effet de bloom  aux éléments moins brillants. \[Défaut: 1\]_
 
-Strength - _Adjusts the strength of the bloom effect \[Default: 3.5\]_
+Strength - _Règle la force de l'effet de bloom. \[Défaut: 3.5\]_
 
-Radius - _Adjusts the radius of the bloom. Higher values increases the size of the glow. \[Default: 3\]_
+Radius - _Règle la taille du bloom. Des valeurs plus élevées augmentent la taille de la lueur. \[Défaut: 3\]_
 
-**How to:**
+**Comment faire:**
 
-Toggle the boolean property located at: **Armory Render Path** &gt; **Bloom**.
+Changer la propriété booléenne située à l'emplacement suivant : **Armory Render Path** &gt; **Bloom**.
 
 | Blend example |
 | :--- |
 | [https://github.com/armory3d/armory\_examples/tree/master/render\_bloom](https://github.com/armory3d/armory_examples/tree/master/render_bloom) |
 
-## Film Grain {#film-grain}
+## Grain {#film-grain}
 
-Film Grain or Granularity is a screen effect typically seen in film and photography occuring due to small particles during the film processing. In Armory the effect is simulated by a shader adding noise each frame.
+Le grain ou granularité du film est un effet d'écran généralement observé dans les films et la photographie en raison de la présence de petites particules pendant le traitement du film. Dans Armory, l'effet est simulé par un shader qui ajoute du bruit à chaque image.
 
-| Without grain | With grain |
+| Sans grain | Avec grain |
 | :--- | :--- |
 | ![](/graphics/img/se/Without_Grain.gif) | ![](/graphics/img/se/With_Grain.gif) |
 
-_A comparison of a scene with and without film grain. _
+_Comparaison d'une scène avec et sans grain. _
 
-##### Properties:
+##### Propriété:
 
-Strength - _Sets the strength of the film grain in the scene. \[Default: 2\]_
+Strength - _Règle la force du grain du film dans la scène. \[Défaut: 2\]_
 
-**How to:**
+**Comment faire:**
 
-Toggle the boolean property located at: **Armory Render Props** &gt; **Film Grain**.
+Basculer la propriété booléenne située sur : **Armory Render Props** &gt; **Film Grain**.
 
 ## Fish Eye {#fish-eye}
 
-To be written...
+En cours de rédaction......
 
 ## Lens Flares {#lens-flares}
 
-To be written...
+En cours de rédaction......
 
 ## Lens Textures {#lens-textures}
 
-To be written...
+En cours de rédaction......
 
 ## Letterboxing {#letterboxing}
 
-Letterboxing is an effect where a widescreen aspect ratio is transferred to a standard width video format. As the name refers to, the frame is compressed into a wider frame in the shape of a letterbox. In gaming it's often used during cutscenes and dialogues.
+La Letterboxing est un effet dans lequel un format d'écran large est transféré vers un format vidéo de largeur standard. Comme son nom l'indique, le cadre est compressé dans un cadre plus large en forme de boîte aux lettres. Dans le jeu, il est souvent utilisé pendant les coupes et les dialogues.
 
-| Without letterboxing | With letterboxing |
+| Sans letterboxing | Avec letterboxing |
 | :--- | :--- |
 | ![](/graphics/img/se/No_Letterbox.jpg) | ![](/graphics/img/se/Letterbox.jpg) |
 
-##### Properties:
+##### propriété:
 
-Size - The size in relation pf the width in relation to the letterboxing_. \[Default: 0.1\]_
+Size - La taille en relation avec la dimention du letterboxing._. \[Défaut: 0.1\]_
 
 | Blend Example |
 | :--- |
@@ -115,25 +115,25 @@ Size - The size in relation pf the width in relation to the letterboxing_. \[Def
 
 ## LUT Colorgrading {#lut-colorgrading}
 
-3D LUT based colorgrading is an effect where a user provided LUT file \(in Armory just a .jpg file\) adjusts the colors of the screen. Often used to create atmospheric scenes.![](/graphics/img/se/Render Result - Noir.png)
+L'étalonnage 3D basé sur LUT est un effet dans lequel un utilisateur a fourni un fichier LUT. \(dans armory juste un fichier .jpg\) ajuste les couleurs de l'écran. Souvent utilisé pour créer des scènes d'ambiance.![](/graphics/img/se/Render Result - Noir.png)
 
-_A scene showing an example of a Noir/BW LUT file._
+_Une scène montrant un exemple d'un fichier Noir et blanc LUT._
 
-**How to:**
+**Comment faire:**
 
-In your project folder, make a folder called "Bundled" and in that folder, provide a 512x512 LUT called "luttexture.jpg".
+Dans votre dossier de projet, créez un dossier appelé "Bundled" et dans ce dossier, fournissez une un fichier LUT de 512x512 appelée "luttexture.jpg".
 
-In Armory Render Props &gt; LUT Texture, write "luttexture.jpg".
+Dans Armory Render Props &gt; LUT Texture, write "luttexture.jpg".
 
-**How to make your own LUT files \(recommended procedure\):**
+**Comment faire vos propre fichiers LUT \(Procédure recommandé\):**
 
-First, take a screenshot of your scene that you haven't colorgraded yet, and open it in your favorite image editor \(Photoshop, Affinity Photo, Gimp, etc.\)
+Tout d'abord, prenez une capture d'écran de votre scène que vous n'avez pas encore colorée, et ouvrez-la dans votre éditeur d'images préféré \(Photoshop, Affinity Photo, Gimp, etc.\)
 
-In the corner, put this a color neutral LUT file \(included in the blend example below\) alongside and begin adding adjustments.
+Dans le coin, mettez un fichier LUT neutre \(inclus dans l'exemple de mélange ci-dessous\) à côté et commencez à ajouter des ajustements.
 
-Delete your screenshot, so only the 512x512 is visible with your LUT and your color adjustments.
+Supprimez votre capture d'écran, de sorte que seul le 512x512 soit visible avec votre LUT et vos ajustements de couleur.
 
-Save it as "luttexture.jpg" using the adjustments you've made.
+Enregistrez-le sous le nom "luttexture.jpg" en utilisant les réglages que vous avez effectués.
 
 | Blend Example |
 | :--- |
@@ -141,80 +141,80 @@ Save it as "luttexture.jpg" using the adjustments you've made.
 
 ## Motion Blur {#motion-blur}
 
-To be written...
+En cours de rédaction......
 
 ## Screen-Space Raytraced Shadows {#ssrs}
 
-To be written...
+En cours de rédaction......
 
 ## Screen-Space Reflections {#ssr}
 
-Screen-Space Reflection is a technique where screen-space objects is reflected on a glossy medium such as metal or water. The limitation of this shader is that only objects visible within the frame is reflected.
+Screen-Space Reflections est une technique où les objets de l'espace sont réfléchis sur un support brillant comme le métal ou l'eau. La limitation de ce shader est que seuls les objets visibles à l'intérieur du cadre sont réfléchis.
 
-**Properties:**
+**Propriété:**
 
-Ray Step - _A placeholder description..._
+Ray Step - _Description prochainement (en construction)..._
 
-Ray Step Minimum - _A placeholder description..._
+Ray Step Minimum - _Description prochainement (en construction)..._
 
-Search Distance - _A placeholder description..._
+Search Distance - _Description prochainement (en construction)..._
 
-Falloff - _A placeholder description..._
+Falloff - _Description prochainement (en construction)..._
 
-Jitter - _A placeholder description..._
+Jitter - _Description prochainement (en construction)..._
 
-**How to:**
+**Comment faire:**
 
-Toggle the boolean property located at: **Armory Render Path** &gt; **SSR**.
+Activer la propriété booléenne située à l'emplacement suivant : **Armory Render Path** &gt; **SSR**.
 
 ## Tonemapping {#tonemapping}
 
-Tonemapping is a technique used in image processing and graphics used to map a set of colors to another in order to simulate the appearances of HDR images/frames to an SDR display set. Armory comes with 4 tonemapping algorithms:
+Le Tonemapping est une technique utilisée dans le traitement de l'image et les graphiques utilisés pour mapper un ensemble de couleurs à un autre afin de simuler les apparences des images HDR à un ensemble d'affichage SDR. Armory est livré avec 4 algorithmes de tonemapping :
 
-* Filmic - The default option in Armory. 
-* Filmic 2 - Default option in Unreal Engine. Uses the ACES \(Academy Color Encoding System\) film mapping curve.
-* Reinhard - A very commonly used tonemapping operator.
-* Uncharted - An implementation of tonemapping developed for the game Uncharted 2.
+* Filmic - L'option Défaut d'Armory. 
+* Filmic 2 - Option Défaut dans Unreal Engine. Utilise la courbe ACES\(Academy Color Encoding System\).
+* Reinhard - Un opérateur de tonemapping très couramment utilisé.
+* Uncharted - Une implémentation de tonemapping développée pour le jeu Uncharted 2.
 
-| None | Filmic | Filmic2 | Reinhard | Uncharted |
+| Aucun | Filmic | Filmic2 | Reinhard | Uncharted |
 | :--- | :--- | :--- | :--- | :--- |
 | ![](/graphics/img/se/T_None.jpg) | ![](/graphics/img/se/T_Filmic.jpg) | ![](/graphics/img/se/T_Filmic2.jpg) | ![](/graphics/img/se/T_Reinhard.jpg) | ![](/graphics/img/se/T_Uncharted.jpg) |
 
-_A comparison of how the different tonemapping operators affects the brightness and colors of a frame._
+_Une comparaison de la façon dont les différents opérateurs de tonemapping affectent la luminosité et les couleurs d'un cadre.._
 
-**How to:**
+**Comment faire:**
 
-Select the tonemapping option located at: **Armory Render Props** &gt; **Tonemapping**.
+Sélectionnez l'option de tonemapping située à l'adresse: **Armory Render Props** &gt; **Tonemapping**.
 
 ## Vignette {#vignette}
 
-Vignette is a screen-effect where the brightness is reduced at the periphery of a frame. It's often an unintended effect occuring in photography and optics due to lens limitations. In gaming, it's often used to create more focus on central points of the screen.
+La vignette est un effet d'écran où la luminosité est réduite à la périphérie d'un cadre. C'est souvent un effet involontaire qui se produit dans la photographie et l'optique en raison des limitations de l'objectif. Dans le jeu, il est souvent utilisé pour créer plus de focus sur les points centraux de l'écran.
 
 |  |
 | :--- |
 | _**To do: .....Insert an illustratory jpg's here...**_ |
 
-**How to:**
+**Comment faire:**
 
-Toggle the boolean property located at: **Armory Render Props** &gt; **Vignette**.
+Activer la propriété booléenne située à l'emplacement suivant : **Armory Render Props** &gt; **Vignette**.
 
 ## Volumetric Fog {#volumetric-fog}
 
-To be written...
+En cours de rédaction......
 
-## Volumetric Light {#volumetric-light}
+## Lumière Volumétrique {#volumetric-light}
 
-Volumetric Light \(often referred to as god rays\) is an effect where it allows the user to create beams of light emanating from a light source. In the real world, this effect is known as crepuscular rays and is present when strong light passes through a medium such as fog, gas, dust, etc.
+La lumière volumétrique (souvent appelée rayons divins) est un effet qui permet à l'utilisateur de créer des faisceaux de lumière émanant d'une source de lumière. Dans le monde réel, cet effet est connu sous le nom de rayons crépusculaires et est présent lorsque la lumière forte traverse un milieu tel que le brouillard, le gaz, la poussière, etc.
 
-| No volumetric light | With volumetric light |
+| Sans lumière volumétrique | Avec lumière volumétrique |
 | :--- | :--- |
 | ![](/graphics/img/se/No_Volumetric_Lights.jpg) | ![](/graphics/img/se/Volumetric_Lights.jpg) |
 
-_A scene with an without volumetric light turned on. The light beams coming through the windows are visible on the right. Also note that the volumetric light affects the global illumination._
+_Une scène avec et sans lumière volumétrique allumée. Les faisceaux lumineux qui traversent les fenêtres sont visibles à droite. Notez également que la lumière volumétrique affecte l'éclairage global._
 
-**How to:**
+**Comment faire:**
 
-Toggle the boolean property located at: **Armory Render Path** &gt; **Volumetric Light**.
+Activer la propriété booléenne située à l'emplacement suivant : **Armory Render Path** &gt; **Volumetric Light**.
 
-Add a spotlight pointing to where you want volumetric light to be.
+Ajoutez un projecteur pointant vers l'endroit où vous voulez que la lumière volumétrique soit.
 

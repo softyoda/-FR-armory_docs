@@ -1,6 +1,6 @@
 # Anti-aliasing (AA)
 
-Aliasing has a big impact on the image quality. To fight it, Armory comes pre-equipped with several solutions. Each has varying quality / performance ratio.
+L'aliasing a un grand impact sur la qualité de l'image. Pour le combattre, Armory est pré-équipée de plusieurs solutions. Chacun d'eux a un rapport qualité/performance variable.
 
 - [No AA](#no-aa)
 - [MSAA](#msaa)
@@ -9,30 +9,31 @@ Aliasing has a big impact on the image quality. To fight it, Armory comes pre-eq
 - [Temporal AA](#taa)
 - [Super sampling](#super-sampling)
 
-![](/graphics/img/aa/noaa_taa.jpg)
+![](/graphique/img/img/aaa/noaaa_taa.jpg)
 
-### No AA
+#### No AA
 
-AA can be completely disabled. Currently, Forward Low render path has no AA enabled by default.
+AA peut être complètement désactivé. Actuellement, Forward Low render path n'a pas d'AA activé par défaut.
 
-![](/graphics/img/aa/noaa.jpg)
+![](/graphique/img/img/aaa/noaa.jpg)
 
 ### MSAA
 
-MSAA can be utilized for Forward Low render path, or any custom path that renders directly to framebuffer. MSAA can be enabled by setting **Render** - **Armory Build** - **Samples per Pixel**. Enter a value from 1 (disabled) to 16 (max quality).
+MSAA peut être utilisé pour le chemin de rendu Forward Low, ou n'importe quel chemin personnalisé qui rend directement au framebuffer. MSAA peut être activé en réglant **Render** - **Armory Build** - **Samples per Pixel**. Entrer une valeur de 1 (désactivé) à 16 (qualité maximale).
 
 ### FXAA
-The fastest technique, at a cost of blurring some elements. Used in Deferred Low path.
-![](/graphics/img/aa/fxaa.jpg)
+La technique la plus rapide, au prix d'un brouillage de certains éléments.
+![](/graphique/img/img/aaa/fxaa.jpg)
 
 ### Subpixel Morphological AA
-Used in Deferred path.
+Utilisé en voie différée.
 ![](/graphics/img/aa/smaa.jpg)
 
 ### Temporal AA
-Used in Deferred High path. For dynamic scenes, velocity buffer is required for repojection.
-![](/graphics/img/aa/taa_smaa.jpg)
+Utilisé en voie haute différée. Pour les scènes dynamiques, une mémoire tampon de vitesse est nécessaire pour la repojection.
+![](/graphique/img/img/aaa/taa_smaa.jpg)
 
-### Super-sampling
-Very costly method producing very good results.
-![](/graphics/img/aa/taa_smaa_2x.jpg)
+#### Super sampling
+Méthode très coûteuse produisant de très bons résultats.
+![](/graphiques/img/img/aaa/taa_smaa_smaa_2x.jpg)
+

@@ -1,7 +1,12 @@
-# The zlib/libpng License
+# La licence zlib/libpng
 
-This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
-Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
-The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
-Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
-This notice may not be removed or altered from any source distribution.
+Ce logiciel est fourni tel quel, sans aucune garantie expresse ou implicite. En aucun cas, les auteurs ne pourront être tenus responsables de tout dommage résultant de l'utilisation de ce logiciel. 
+
+La permission est accordée à quiconque d'utiliser ce logiciel à toutes fins, y compris les applications commerciales, de le modifier et de le redistribuer librement, sous réserve des restrictions suivantes : 
+
+- L'origine de ce logiciel ne doit pas être déformée ; vous ne devez pas prétendre que vous avez écrit le logiciel original. 
+Si vous utilisez ce logiciel dans un produit, un accusé de réception dans la documentation du produit serait apprécié mais n'est pas nécessaire. 
+
+- Les versions de source modifiées doivent être clairement marquées comme telles et ne doivent pas être présentées à tort comme étant le logiciel original. 
+
+Cet avis ne peut être retiré ou modifié d'aucune source de distribution.

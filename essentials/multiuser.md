@@ -1,15 +1,15 @@
-# Multi-User Workflow
+# Flux de travail multi-utilisateurs
 
-This page discusses tools to help multiple people work on the same project.
+Cette page traite des outils pour aider plusieurs personnes à travailler sur le même projet.
 
-## Linked Proxy
-Project can be split into several individual `.blend` files. These `.blend` files are then combined into the main file using Blenders linking functionality. See bundled [example](https://github.com/armory3d/armory_examples/tree/master/linked_proxy).
+## Proxy lié
+Le projet peut être divisé en plusieurs fichiers `.blend` individuels. Ces fichiers `.blend` sont ensuite combinés dans le fichier principal à l'aide de la fonctionnalité de liaison Blenders. Voir[exemple](https://github.com/armory3d/armory_examples/tree/master/linked_proxy).
 
-## Proxy Tools
-Once the objects are linked in the main file, locate helper tools in `Properties - Object - Armory Proxy`. In this panel you can turn full hierarchy of linked objects into proxies using the `Make Proxy` operator. You can also manage which properties to keep in sync with the original linked object. Checked properties are automatically synced at `.blend` load. You can also trigger the sync manually by pressing `ctrl + shift + o -> enter`.
+## Outils proxy
+Une fois que les objets sont liés dans le fichier principal, localisez les outils d'aide dans `Properties - Object - Armory Proxy`. Dans ce panneau, vous pouvez transformer la hiérarchie complète des objets liés en proxies en utilisant l'opérateur `Make Proxy`. Vous pouvez également gérer les propriétés à synchroniser avec l'objet lié original. Les propriétés vérifiées sont automatiquement synchronisées au `.blend`charger . Vous pouvez également déclencher la synchronisation manuellement en appuyant sur `ctrl + shift + o -> enter`.
 
-## Editing linked data
-Blender comes with a handy add-on which lets you jump straight into the source `.blend` of the selected linked object. Enable `Edit Linked Library` add-on to unlock this functionality. A video explaining how to use the add-on can be found [here](https://vimeo.com/41440647).
+## Édition de données liées
+Blender est livré avec un add-on pratique qui vous permet de sauter directement dans le fichier source `.blend` de l'objet lié sélectionné. Activez l'extension `Edit Linked Library` pour déverrouiller cette fonctionnalité. Une vidéo expliquant comment utiliser l'add-on peut être trouvée[ici](https://vimeo.com/41440647).
 
-## Project Root
-If you keep `.blend` files in sub-folders it's necessary to set the project root folder. Set `Properties - Render - Armory Project - Root` to the location of main `.blend` file. With project root correctly setup `.blend` files in sub-folders will be able to find the haxe traits, and it's also possible to `Play` the `.blend` files on their own.
+## Racine du projet
+Si vous conservez les fichiers `.blend' dans des sous-dossiers, il est nécessaire de définir le dossier racine du projet. Définissez `Properties - Render - Armory Project - Root` à l'emplacement du fichier principal `.blend`. Avec la racine du projet correctement configuré `.blend` fichiers dans les sous-dossiers seront en mesure de trouver les caractéristiques haxe, et il est également possible de `Play` les fichiers `.blend` eux mêmes.

@@ -1,30 +1,31 @@
-# Playground Tutorial
+# Tutoriel "Playground"
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H5ylSfTfNg8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-This tutorial walks you through the Armory basics. We will create a playground-like scene showcasing the essential features step-by-step. Let's go!
+Ce tutoriel vous guide à travers les bases d'Armory. Nous créerons une scène ressemblant à un terrain de jeu et présentant les caractéristiques essentielles étape par étape. Allons-y !
 
-- Get the [.blend file](https://github.com/armory3d/armory_tutorials/releases) for this tutorial.
+- Téléchargez le fichier [.blend](https://github.com/armory3d/armory_tutorials/releases) pour ce tutoriel.
 
 ### Hello World
 
-Pick-up where we left in the [setup tutorial](./getting_started/setup.md). Open Blender, save the project and select `Cycles Render` or `Eevee` engine in the header. Press `Armory Player - Run (F5)` to play in window.
+Reprendre là où nous avons laissé le tutoriel [Installation](./getting_started/setup.md). Ouvrez Blender, enregistrez le projet et sélectionnez le moteur `Cycles Render` ou `Eevee` dans l'en-tête. Appuyez sur `Armory Player - Run (F5)` pour jouer dans la fenêtre.
 
-You can select a runtime in the `Armory Player` panel:
-- Select `Krom` to quickly play the scene.
-- Select `Browser` for HTML5 deploy.
-- Select `C++` for native deploy (C++ compiler required). 
+Vous pouvez sélectionner une runtime dans le panneau " Armory Player " :
+- Sélectionnez `Krom` pour jouer rapidement la scène.
+- Sélectionnez " Navigateur " pour le déploiement HTML5.
+- Sélectionnez `C++` pour le déploiement natif (compilateur C++ requis). 
 
-You can also select camera mode in the `Armory Player` panel:
-- Select `Scene` to start the game from the point of active scene camera.
-- Select `Viewport` to start the game from the viewport view. This is useful for quick scene preview as it also lets you control the camera. Try it out!
-- Press `Shift + F` in 3D View to navigate around the scene.
 
-Additionally, you can tweak the `Dimensions - Resolution` for window size. To run in fullscreen, select `Armory Project - Window Mode - Fullscreen`.
+Vous pouvez également sélectionner le mode caméra dans le panneau " Armory Player " :
+- Sélectionnez `Scene' pour démarrer le jeu à partir du point de la caméra de scène active.
+- Sélectionnez `Viewport' pour démarrer le jeu à partir de la vue viewport. Ceci est utile pour une prévisualisation rapide de la scène car il vous permet également de contrôler l'appareil photo. Essayez-le !
+- Appuyez sur `Shift + F` dans la vue 3D pour naviguer autour de la scène.
+
+De plus, vous pouvez modifier les `Dimensions - Résolution` pour la taille de la fenêtre. Pour exécuter en plein écran, sélectionnez  `Armory Project - Window Mode - Fullscreen`.
 
 <a href="./getting_started/img/playground/1.jpg">![](./getting_started/img/playground/1.jpg)</a>
 
-### Objects
+### Objets
 
 We will start with some Blender basics on how to manipulate scene objects:
 
@@ -33,67 +34,82 @@ We will start with some Blender basics on how to manipulate scene objects:
 - Select objects with `right-click`.
 - Delete objects by pressing `X`.
 
+
+
+Nous allons commencer par quelques notions de base de Blender sur la manipulation des objets de la scène :
+
+- Dans la vue 3D, cliquez sur " Espace " et tapez " Ajouter un plan " pour créer un objet plan (ou faites " Ajouter - Mesh - Plan " à partir de l'en-tête de la vue 3D).
+- Appuyez sur `S' pour mettre à l'échelle le plan, `R` pour tourner, ou `G` pour saisir et déplacer.
+- Sélectionner les objets avec le clic droit.
+- Effacer des objets en appuyant sur " X ".
+
+
 ### Modifiers
 
-Blender has a variety of modifiers which apply procedural effects on the active object. Select Cube, navigate to the `Modifiers` tab and add `Bevel` modifier to make the cube edges look polished.
+Blender a une variété de modificateurs qui appliquent des effets procéduraux sur l'objet actif. Sélectionnez Cube, naviguez jusqu'à l'onglet `Modifiers` et ajoutez le modificateur `Bevel` pour que les bords du cube aient l'air polis.
 
 <a href="./getting_started/img/playground/1b.jpg">![](./getting_started/img/playground/1b.jpg)</a>
 
 ### Materials
 
-Select Cube and switch to `Node Editor`. Go to `Shader Nodes` and enable `Use Nodes`. Now you can tweak the material color and roughness using the default `Diffuse BSDF` node.
+Sélectionnez Cube et passez à l'éditeur de nodes. Allez dans `Shader Nodes' et activez `Use Nodes'. Vous pouvez maintenant ajuster la couleur et la rugosité(roughness) du matériau en utilisant le nodes par défaut `Diffuser BSDF`.
 
 <a href="./getting_started/img/playground/2.jpg">![](./getting_started/img/playground/2.jpg)</a>
 
-Next, switch back to `3D View` and select Plane. We want to put a texture on it. Press `Tab` to enter edit mode, hit `Space` and type `Unwrap` to create UV coords for the plane.
+Ensuite, revenez à `3D View` et sélectionnez Plane. Nous voulons lui donner une texture. Appuyez sur `Tab` pour entrer en mode édition, appuyez sur `Space` et tapez `Unwrap` pour créer des coordonnées UV pour le plan.
 
-In Material tab, create a new material. Switch to Node Editor like we did before. Select `Diffuse BSDF` node and press `X` to delete it. In header, press `Add - Group - Armory PBR` and place in on the canvas. Connect the `Surface` socket to the `Material Output` node. For best results, prefer to use the `Armory PBR` node when working with materials in Armory.
+Dans l'onglet Material, créez un nouveau material. Passez à Node Editor comme nous l'avons fait auparavant. Sélectionnez le nodes `Diffuse BSDF` et appuyez sur `X` pour le supprimer. Dans l'en-tête, appuyez sur `Add - Group - Armory PBR` et placez-le. Connecter la prise `Surface` au nodes `Material Output`. Pour de meilleurs résultats, préférez utiliser le nodes `Armory PBR` lorsque vous travaillez avec des matériaux dans Armory.
 
 ![](./getting_started/img/playground/grid_base.png)
 ![](./getting_started/img/playground/grid_rough.png)
 
 Save the images above and simply drag-and-drop the files onto the node canvas in Blender. Connect the `Image Texture` nodes to the `Base Color` and `Roughness` sockets.
+Sauvegardez les images ci-dessus et glissez-déposez simplement les fichiers dans le node editor sur Blender. Connectez les nodes `Image Texture` aux sockets `Base Color` et `Roughness`.
 
 <a href="./getting_started/img/playground/3.jpg">![](./getting_started/img/playground/3.jpg)</a>
 
-Following these steps, a basic scene is already shaping up. Hit `F5` to play the scene in Armory!
+A la suite de ces étapes, une scène de base se dessine déjà. Appuyez sur `F5` pour jouer la scène dans Armory !
 
 <a href="./getting_started/img/playground/5.jpg">![](./getting_started/img/playground/5.jpg)</a>
 
 ### Animation
 
 Let's create an animation rotating the cube. Locate the `Timeline` and go to frame 1. Select Cube and press `I - Rotation` to insert keyframes for the rotation. Next, go to frame 60 in the timeline. With Cube selected, press `R` to rotate it desired amount and press `I - Rotation` again.
+Créez une animation qui fait tourner le cube. Localisez la `Timeline` et allez à la frame 1. Sélectionnez Cube et appuyez sur `I - Rotation` pour insérer les images-clés pour la rotation. Ensuite, allez à la frame 60 dans la timeline. Lorsque le Cube est sélectionné, appuyez sur `R` pour le faire pivoter a la position désirée et appuyez à nouveau sur `I - Rotation`.
+
 
 <a href="./getting_started/img/playground/6.jpg">![](./getting_started/img/playground/6.jpg)</a>
 
-### Lights
+### Lumières
 
-Select lamp object from hierarchy and switch to `Data` tab. You can set the lamp type and tweak the lamp color and strength.
+Sélectionnez l'objet lampe dans la hiérarchie et passez à l'onglet `Data`. Vous pouvez définir le type de lampe et ajuster la couleur et la puissance de la lampe.
 
 <a href="./getting_started/img/playground/9.jpg">![](./getting_started/img/playground/9.jpg)</a>
 
-### Environment
+### Environnement
 
 World nodes are used to setup the environment. Switch to `Node Editor - World Nodes` to access the nodes. In this tutorial, we use `Sky Texture` node to render procedural sky. If we were to add an environment map, we would use the `Environment Texture` node with `.hdr` file.
 
+Les "World nodes" sont utilisés pour configurer l'environnement. Passez à `Node Editor - World Nodes` pour accéder aux nodes (icone rond bleu). Dans ce tutoriel, nous utilisons le noeud `Sky Texture` pour rendre le ciel procédural. Si nous devions ajouter une texture d'environment, nous utiliserions le noeud `Environment Texture` avec le fichier `.hdr`.
+
 <a href="./getting_started/img/playground/10.jpg">![](./getting_started/img/playground/10.jpg)</a>
 
-### Physics
+### Physique
 
-With object selected, navigate to the `Physics` tab and press the `Rigid Body` button. Set desired shape representing the object in the `Rigid Body Collision` panel.
+Avec l'objet sélectionné, naviguez jusqu'à l'onglet `Physics` et appuyez sur le bouton `Rigid Body`. Définir la forme désirée représentant l'objet dans le panneau `Rigid Body Collision`.
 
-In the `Rigid Body` panel, set object mass and type:
-- Select `Active` for objects which are freely affected by physics.
-- Select `Passive` for objects which are animated on the timeline.
+Dans le panneau `Rigid Body`, définissez la masse et le type de l'objet :
+- Sélectionnez `Active` pour les objets qui sont librement affectés par la physique.
+- Sélectionnez `Passive` pour les objets qui sont animés sur la timeline.
 
 <a href="./getting_started/img/playground/11.jpg">![](./getting_started/img/playground/11.jpg)</a>
 
-### Asset Import
+### Importation d'asset
 
-With Blender, we can easily import common asset formats.
-- Select `File - Import` to import file formats.
-- Select `File - Append` to import objects from other .blend files.
-- Select `File - Link` to link objects from other .blend files.
+Avec Blender, il est possible d'importer facilement des formats de fichiers communs.
+- Sélectionnez `File - Import` pour importer des formats de fichiers.
+- Sélectionnez `File - Append` pour importer des objets à partir d'autres fichiers.blend.
+- Sélectionnez `File - Link` pour lier les objets d'autres fichiers .blend.
 
 In this tutorial, we are using an animated `.fbx` model from [mixamo](http://mixamo.com), imported using the `File - Import` option.
 
@@ -101,7 +117,7 @@ In this tutorial, we are using an animated `.fbx` model from [mixamo](http://mix
 
 ### Logic Nodes
 
-Logic nodes provide a visual way of creating interactive scenes. When you build your project, created node trees are automatically compiled down to scripts.
+Les nodes logiques fournissent un moyen visuel de créer des scènes interactives. Lorsque vous construisez votre projet, les nodes créés sont automatiquement compilés en scripts.
 
 The system consists of 5 essential categories:
 - `Events` - nodes where execution starts, triggered by desired event
@@ -110,29 +126,39 @@ The system consists of 5 essential categories:
 - `Variables` - nodes used to store data in a logic tree
 - `Values` - nodes used to retrieve data from other objects
 
-We will animate the Cylinder procedurally using logic nodes. Switch to `Node Editor` area and select `Logic` nodes. Press `New` to create a new node tree.
+Le système se compose de 5 catégories essentielles :
+- `Events` - node où l'exécution commence, déclenchée par l'événement désiré.
+- `Actions` - s'active une fois qu'un événement est déclenché.
+- `Logic` - noeuds utilisés pour contrôler le flux d'exécution, en utilisant des branchement, des boucles, et des portes logiques...
+- `Variables` - nodes utilisés pour stocker des données dans une arborescence logique.
+- `Values` - nodes utilisés pour récupérer des données à partir d'autres objets.
 
-You can browse all available nodes through `Add` menu item, or simply hit `Shift + A` to start searching.
 
-- Search for `On Update` node and place it. This is an action node which gets called each frame.
-- Connect it to the `Set Location` node.
-- Add a `Vector` node and connect it to the `Set Location` node. Each frame, Cylinder location will be set to this vector.
-- For the `X` location, add `Math` node and set it to `Sine`.
-- Add `Time` node to drive the sine node.
-- Add another `Math` node, scaling the sine output.
-- We will keep the `Y` and `Z` location unchanged.
+Nous allons animer le cylindre de manière procédurale en utilisant des noeuds logiques. Passez à la zone `Node Editor` et sélectionnez `Logic` nodes. Appuyez sur `New` pour créer une nouvelle arborescence de nodes.
+
+Vous pouvez parcourir tous les nodess disponibles via l'élément de menu `Add`, ou simplement appuyer sur " Maj + A " pour lancer la recherche.
+
+- Rechercher le nodes `On Update` et le placer. Il s'agit d'un nodes d'action qui est appelé chaque trame.
+- Connectez-le au nodes `Set Location`.
+- Ajouter un nodes `Vector` et le connecter au nodes `Set Location`. Chaque image, l'emplacement du cylindre sera réglé sur ce vecteur.
+- Pour l'emplacement `X`, ajoutez le nodes `Math` et réglez-le sur `Sine`.
+- Ajouter le nodes `Time` pour piloter le nodes sinusoïdal.
+- Ajouter un autre nodes `Math`, en mettant à l'échelle la sortie sinusoïdale.
+- Nous garderons les emplacements `Y` et `Z` inchangés.
 
 Each node tree has to be attached to an object. Select Cylinder and create new trait in `Properties - Object - Armory Traits`. Set type to `Nodes` and enter our newly created node tree as `Tree` entry.
+Chaque nodes doit être attaché à un objet. Sélectionnez Cylindre et créez un nouveau trait dans `Properties - Object - Armory Traits`. Définissez le type sur `Nodes` et entrez notrs nodes nouvellement créé en tant qua `Tree`.
 
 <a href="./getting_started/img/playground/12.jpg">![](./getting_started/img/playground/12.jpg)</a>
 
 ### Haxe Scripts
 
-We can program the object traits directly using the `Haxe` programming language. Let's create a trait which spawns a box after pressing a key.
+Nous pouvons programmer les caractéristiques de l'objet directement en utilisant le langage de programmation `Haxe`. Créons un trait qui donne naissance à une case après avoir appuyé sur une touche.
 
-Create an empty object in the scene (`Space - Add Empty`). The location of this object will serve as the spawning point. Create a new trait in `Properties - Object - Armory Traits`. Set type to `Haxe` and press the `New Script` button.
+Créez un objet vide dans la scène (`Shift+A - Add - Empty Plain Axes`). L'emplacement de cet objet servira de point de spawn. Créez un nouveau trait dans `Properties - Object - Armory Traits'. Définissez le type sur `Haxe' et appuyez sur le bouton `New Script`.
 
-Press the `Edit Script` to open script file in Kode Studio. Kode Studio is a dedicated code editor which includes code completition and debugging support.
+Appuyez sur `Edit Script` pour ouvrir le fichier script dans Kode Studio. Kode Studio est un éditeur de code dédié qui inclut la complétion de code et le support du débogage.
+
 
 ```haxe
 package arm;
@@ -171,38 +197,41 @@ class SpawnBox extends iron.Trait {
 
 <a href="./getting_started/img/playground/13.jpg">![](./getting_started/img/playground/13.jpg)</a>
 
-### Bundled Scripts
+### Scripts groupés
 
-Armory comes with a set of pre-created bundled scripts. Similar to regular script, bundled script can be attached to an object as a trait. In this tutorial, we will use the `PhysicsDrag` trait. When this trait is attached to physics-enabled object, it lets us drag this object around using the mouse.
+Armory est livré avec un ensemble de scripts pré-créés. Semblable au script régulier, les scripts groupés peuvent être attachés à un objet en tant que trait de caractère. Dans ce tutoriel, nous utiliserons le trait `PhysicsDrag`. Lorsque ce trait est attaché à un objet physique, il nous permet de faire glisser cet objet à l'aide de la souris.
 
 <a href="./getting_started/img/playground/14.jpg">![](./getting_started/img/playground/14.jpg)</a>
 
 ### UI Canvas
 
-To build game interface, a dedicated ArmorUI tool is used.
+UI signifie interface utilisateur.
 
-Apart from objects, scene itself can contain traits as well. This is a good fit for UI traits. Switch to `Scene` tab and add a new trait in the `Armory Traits` panel. Set trait type to `UI` and press the `New Canvas` button. Afterwards, pressing the `Edit Canvas` button will launch ArmorUI.
+Pour construire l'interface de jeu, un outil ArmorUI dédié est utilisé.
 
-In `ArmorUI`, press `Text` button to spawn a text object. Adjust the text in `Properties` panel and hit `Save`. If you launch the game now, canvas will get displayed.
+Outre les objets, la scène elle-même peut aussi contenir des caractéristiques. Cela correspond bien aux caractéristiques de l'UI. Allez à l'onglet `Scene' et ajoutez une nouvelle caractéristique dans le panneau `Armory Traits`. Définissez le type de caractéristique sur `UI' et appuyez sur le bouton `New Canvas`. Ensuite, appuyez sur le bouton `Edit Canvas` pour lancer ArmorUI.
+
+Dans `ArmorUI`, appuyez sur le bouton `Text` pour générer un objet texte. Ajustez le texte dans le panneau `Properties`  et cliquez sur `Save`. Si vous lancez le jeu maintenant, l'interface s'affichera.
 
 <a href="./getting_started/img/playground/15.jpg">![](./getting_started/img/playground/15.jpg)</a>
 
-### Render Path
+### Chemin de rendu
 
-Armory is powered by a programmable render path system. Navigate to the `Render - Armory Render Path` panel to access the settings. Several presets are available for simple configuration.
+Armory est alimenté par un système de rendu programmable. Naviguez jusqu'au panneau `Render - Armory Render Path` pour accéder aux paramètres. Plusieurs préréglages sont disponibles pour une configuration simple.
 
-Multiple render paths can be created. When exporting the project, you can use the render path which best suits the target hardware.
+Plusieurs chemins de rendu peuvent être créés. Lors de l'exportation du projet, vous pouvez utiliser le chemin de rendu qui convient le mieux au matériel.
 
-If you run on a modern GPU (OpenGL 4.5+), select `Max (Game)` preset to enable more advanced effects like voxel-based ambient occlusion. Note that Voxel AO needs to run in standalone window - simply press `F5` to launch.
+Si vous utilisez un GPU moderne (OpenGL 4.5+), sélectionnez `Max (Game)` pour activer des effets plus avancés comme l'occlusion ambiante à base de voxel. Notez que le Voxel AO doit fonctionner dans une fenêtre autonome - il suffit d'appuyer sur `F5` pour lancer.
 
 <a href="">![](./getting_started/img/playground/16.png)</a>
 
 ### Exporter
 
-When we are ready to publish our project, `Properties - Render - Armory Exporter` does the job.
+Lorsque vous êtes prêt à publier votre projet, allez dans `Properties - Render - Armory Exporter`
 
-You can create multiple export presets, each specifying a target platform, graphics API, render path and start-up scene. Select desired platform and hit `Publish` button. Once finished, hit `Triangle - Open Folder` to view the exported files.
+Vous pouvez créer plusieurs presets d'exportation, chacun spécifiant une plate-forme cible, une API graphique, un chemin de rendu et une scène de démarrage. Sélectionnez la plate-forme souhaitée et cliquez sur le bouton `Publish`. Une fois terminé, cliquez sur `Triangle - Open Folder` pour visualiser les fichiers exportés.
+
 
 <a href="">![](./getting_started/img/playground/17.png)</a>
 
-- Continue to the [Tanks tutorial](./getting_started/tanks.md)
+- Continuez vers le [Tutoriel avec les chars](./getting_started/tanks.md)

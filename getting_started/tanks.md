@@ -2,58 +2,60 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5b97eR5_fQI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-Let's build a mini-game! It will consist of 2 players handling a tank and battling each other. We build a small playground with obstacles and two tanks models. Each object has a rigid body set. Some of the obstacles are animated on the timeline to make the game more dynamic. The lighting setup is based on the [Playground tutorial](./getting_started/playground.md).
+Construisons un mini-jeu ! Il sera composé de 2 joueurs manipulant un tank et se battant l'un contre l'autre. Nous construisons un petit terrain de jeu avec des obstacles et deux modèles de tanks. Chaque objet a un corps rigide. Certains obstacles sont animés sur la timeline pour rendre le jeu plus dynamique. La configuration de l'éclairage est basée sur tutoriel [Playground](./getting_started/playground.md).
 
 ![](./getting_started/img/tanks/1.jpg)
 
-Red tank acts as a player 1. We allow both keyboard and gamepad controls, but hard-code the actual keys used for simplicity. In a **Player1Controls** tree, the left key on keyboard or gamepad is set to send an event named **'turn_left'**. Later on, we use this event to rotate the player controlled tank.
+Le tank rouge agit en tant que joueur 1. Nous autorisons les contrôles du clavier et de la manette de jeu, mais nous codons en dur les touches réelles utilisées par souci de simplicité. Dans une arborescence **Player1Controls**, la touche gauche du clavier ou de la manette de jeu est réglée pour envoyer un événement nommé **'turn_left'**. Plus tard, nous utilisons cet événement pour faire tourner le tank contrôlé par le joueur.
 
 ![](./getting_started/img/tanks/2.jpg)
 
-Do this for all keys - left, right, forward and backward.
+Faites ceci pour toutes les touches - gauche, droite, avant, avant et arrière.
 
 ![](./getting_started/img/tanks/3.jpg)
 
-Blue tank acts as a player 2. We define the same controls, but map the keys to WSAD and the second connected gamepad instead.
+Le tank bleu agit en tant que joueur 2. Nous définissons les mêmes contrôles, mais nous mappons les clés sur WSAD et la deuxième manette de jeu connectée à la place.
 
-In a **TankTree**, we listen to the events and perform actions to actually control the tank. The reason this node tree is separate is that we attach it to both tanks, preventing duplicated node trees.
+Dans un **TankTree**, nous écoutons les événements et effectuons des actions pour contrôler réellement le tank. La raison pour laquelle cet arbre de nodes est séparé est que nous l'attachons aux deux tank, ce qui empêche les arbres de nodes dupliqués.
 
-**On Event** node is set to listen to the **'turn_left'** event. For player 1, this event is triggered when left key is pressed. For player 2, it happens on the A key press. **On Event** node is connected to the **Rotate Object** node, with **Vector Z** value set to a small positive value controlling the rotation speed. Playing the game now, pressing the left key rotates the tank! 
+Le node On Event** est configuré pour écouter l'événement **'turn_left'**. Pour le joueur 1, cet événement est déclenché lorsqu'on appuie sur la touche gauche. Pour le joueur 2, cela se fait en appuyant sur la touche A. Le node **On Event** est connecté au node **Rotate Object**, la valeur **Vector Z** étant réglée sur une petite valeur positive contrôlant la vitesse de rotation. En jouant le jeu maintenant, appuyer sur la touche gauche fait tourner le tank ! 
 
 ![](./getting_started/img/tanks/4.jpg)
 
-We do the same for the **'turn_right'** event, however the **Vector Z** value is set to a negative value to rotate in the opposite direction.
+Nous faisons la même chose pour l'événement **'turn_right'**, mais la valeur **Vector Z** est réglée sur une valeur négative pour tourner dans le sens inverse.
 
-On to the handling **'forward'** event. To figure out which direction should the tank move in, **Vector from Transform** node is used with type set to **Look**. This vector is then scaled down using **Vector Math** node to slow down tank speed moving forward. Resulting vector is passed into **Translate Object** node.
+En ce qui concerne l'événement handling **'forward'**. Pour déterminer la direction dans laquelle le tank doit se déplacer, **Vector from Transform** node est utilisé avec le type réglé sur **Look**. Ce vecteur est ensuite réduit à l'aide du node **Vector Math** pour ralentir la vitesse du tank. Le vecteur résultant est transmis dans le node **Translate Object**.
 
 ![](./getting_started/img/tanks/5.jpg)
 
-As before, we do the same for **'backward'** event with translate vector reversed.
+Comme précédemment, nous faisons la même chose pour l'événement **'backward'** avec le vecteur translate inversé.
 
-Now that the tanks are fully controllable, we make them shoot bullets. To keep scene clear, bullet object is placed in the second scene layer with **Render disabled**. This ensures object will be exported but not visible on its own.
+Maintenant que les tanks sont entièrement contrôlables, nous leur faisons tirer des balles. Pour garder la scène dégagée, l'objet bullet est placé dans la deuxième layer de la scène avec **Render disabled**.. Ceci garantit que l'objet sera exporté mais non visible en tant que tel.
 
 ![](./getting_started/img/tanks/6.jpg)
 
-Selecting the red tank, an empty object is added as a child - the location of this object defines where to shoot bullets from. A new logic tree is added to this empty object. M key or gamepad cross/a key emits a **'fire'** event. We do the same for blue tank.
+En sélectionnant le tank rouge, un objet vide est ajouté en tant qu'enfant - l'emplacement de cet objet définit où tirer les balles. Un nouvel arbre logique est ajouté à cet objet vide. La touche M (ou gamepad) émet un événement **'fire'**. Nous faisons la même chose pour le tank bleu.
 
 ![](./getting_started/img/tanks/7.jpg)
 
 We attach another logic tree - handling response to the **'fire'** event. We spawn a new object - our bullet model from layer 2, and set its location to the logic tree owner - in this case a bullet spawn point - defined as an empty object placed as a child of tank.
 
+Nous attachons un autre arbre logique - gérer la réponse à l'événement **'fire'**. Nous créons un nouvel objet - notre modèle de balle du layer 2, et plaçons son emplacement au propriétaire de l'arbre logique - dans ce cas le point de spawn de la balle - défini comme un objet vide placé comme un enfant de tank.
+
 ![](./getting_started/img/tanks/8.jpg)
 
-Playing the scene now, we discover the bullets fall from the cannon down to the ground. We need some fire powder!
+En jouant la scène maintenant, nous découvrons que les balles tombent du canon jusqu'au sol. Il nous faut de la poudre à feu !
 
 ![](./getting_started/img/tanks/a.jpg)
 
-**Apply Impulse** node fixes that. Similar to moving the tank forward, we acquire the forward vector and scale it up.
+Appliquer le node Impulse** corrige ce problème. Comme pour faire avancer le tank, nous acquérons le vecteur avant et nous le mettons à l'échelle.
 
 ![](./getting_started/img/tanks/9.jpg)
 
-Even though Armory culls out of screen objects, it is important to keep resources used down to a minimum. We remove each bullet after 2 seconds of lifetime. To do this, **Array(Object)** node is placed and all fired bullets are stored in this array using the **Array Add** node. We wait 2 seconds with **Sleep** node and call **Remove Object** node. **Array Shift** node feeds the first element from bullet array into the **Remove Object** node, and also removes this element from array itself.
+Même si Armory élimine les objets de l'écran, il est important de réduire au minimum l'utilisation des ressources. Nous enlevons chaque balle après 2 secondes de vie. Pour ce faire, le node **Array(Object)** est placé et toutes les balles tirées sont stockées dans ce tableau en utilisant le node **Array Add**. Nous attendons 2 secondes avec le node **Sleep** et appelons le node **Remove Object**. Le node  **Array Shift** de tableau alimente le premier élément du tableau de la balle dans le node **Remove Object**, et supprime également cet élément du tableau lui-même.
 
 ![](./getting_started/img/tanks/10.jpg)
 
-That's it - feel free to experiment further! Get the full blend for this tutorial:
+C'est tout - n'hésitez pas à expérimenter davantage ! Téléchargez le .blend complet pour ce tutoriel :
 
 - https://github.com/armory3d/armory_tutorials/tree/master/tanks

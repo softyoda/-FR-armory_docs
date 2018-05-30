@@ -2,7 +2,7 @@
 
 ![](getting_started/img/intro.jpg)
 
-Construire des jeux dans Blender - Armory est un moteur de jeu en intégration complète de Blender, le transformant en un outil de développement de jeu complet.
+Construire des jeux dans Blender - Armory est un moteur de jeu en intégration complète avec Blender, le transformant en un outil de développement de jeu complet.
 
 *Armory n'est pas encore prête pour la production, veuillez lire ce manuel avant de commencer. Nous sommes toujours à la recherche d'autres commentaires - faites-nous part des problèmes que vous rencontrez à [GitHub](https://github.com/armory3d/armory/issues).*.
 
@@ -17,7 +17,7 @@ Armory SDK peut être utiliser sur **Windows**, **Linux** et **macOS**. Les proj
 - [Télécharger le SDK](http://armory3d.org/download.html)
 - [Installer](./getting_started/setup.md)
 - [Playground Tutorial](./getting_started/playground.md)
-- [Tanks Tutorial](./getting_started/tanks.md)
+- [Tutoriel avec les chars](./getting_started/tanks.md)
 
 ### Essentiels
 
@@ -31,7 +31,7 @@ Armory SDK peut être utiliser sur **Windows**, **Linux** et **macOS**. Les proj
 - [Material Vault](https://github.com/armory3d/material_vault)
 
 ### License
-Armory est distribué sous[licence zlib](https://github.com/armory3d/armory/blob/master/LICENSE). Cela signifie que Armory est libre d'utilisation à toutes fins, y compris le développement de logiciels propriétaires à code source fermé et la vente de copies de votre travail. 
+Armory est distribué sous[licence zlib](https://github.com/softyoda/armory_docs/blob/master/LICENSE.md). Cela signifie que Armory est libre d'utilisation à toutes fins, y compris le développement de logiciels propriétaires à code source fermé et la vente de copies de votre travail. 
 
 ### Contribuer
 

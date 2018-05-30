@@ -1,27 +1,27 @@
 # Traits
 
-Armory uses a trait(component) system to insert logic into Blender objects and make them interactive. Traits can be attached to scene objects or scenes itself. To inspect traits placed in the scene, switch to `Groups` view in the `Outliner`.
+Armory utilise un système de trait (caractéristiques) pour insérer la logique dans les objets Blender et les rendre interactifs. Les traits peuvent être attachés à des objets de scène ou à des scènes elles-mêmes. Pour inspecter les traits placés dans la scène, passez à la vue `Groups`" dans l'`Outliner`.
 
-![](/essentials/img/traits_groups.png)
+![](/essentiels/img/traits_groups.png)
 
-There are several trait types:
-- `Haxe Script` - writing script from scratch in Haxe
-- `Bundled Script` - handling common stuff like character controllers, bundled in Armory
-- `Logic Nodes` - assembling logic visually
-- `Canvas` - working with user interface
+Il existe plusieurs types de traits de caractère :
+- `Haxe Script` - écriture du script à partir de zéro dans Haxe.
+- `Bundled Script`  - manipulant des choses communes comme les contrôleurs de caractères, fournis avec Armory.
+- `Logic Nodes`  - assembler la logique visuellement.
+- `Canvas`" - travailler avec l'interface utilisateur.
 
-For scripts, it is possible to pass parameters or set script properties straight from Blender.
+Pour les scripts, il est possible de passer des paramètres ou de définir les propriétés du script directement depuis Blender.
 
-![](/essentials/img/traits_panel.png)
+![](/essentiels/img/traits_panel.png)
 
 ## Trait events
 
-Trait exposes events - this makes it possible to get notified about its life-cycle.
+Trait exposes events - ce qui permet d'être informé de son cycle de vie.
 
-- `Trait.notifyOnAdd()` - trait is added to an object
-- `Trait.notifyOnInit()` - object which this trait belongs to is added to scene
-- `Trait.notifyOnRemove()` - object which this trait belongs to is removed from scene
-- `Trait.notifyOnUpdate()` - update game logic here
-- `Trait.notifyOnRender()` - update rendering here
+`Trait.notifyOnAdd()` - le trait est ajouté à un objet.
+`Trait.notifyOnInit()` - l'objet auquel ce trait appartient est ajouté à la scène.
+`Trait.notifyOnRemove()` - l'objet auquel appartient ce trait est retiré de la scène.
+`Trait.notifyOnUpdate()` - mettre à jour la logique ici.
+`Trait.notifyOnRender()` - mise à jour du rendu ici
 
-As the scene is being built asynchronously, `onInit` event can get called at a time when not all scene objects are present yet. If trait construction depends on other scene objects, use `Scene.active.notifyOnInit()` event which gets called as soon as the scene is fully constructed.
+Comme la scène est construite de manière asynchrone, l'événement `onInit` peut être appelé à un moment où tous les objets de la scène ne sont pas encore présents. Si la construction des traits dépend d'autres objets de scène, utilisez `Scene.active.notifyOnInit()` événement qui est appelé dès que la scène est entièrement construite.

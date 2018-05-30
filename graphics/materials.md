@@ -2,22 +2,21 @@
 
 <img src="./graphics/img/materials.jpg">
 
-*Draft*
 
-Materials are built with [Cycles nodes](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
+Les matériaux sont construits avec des[nodes de cycles](https://docs.blender.org/manual/en/dev/render/cycles/nodes/index.html).
 
 ## Displacement
 
-Locate the `Armory Render Path - Renderer - Displacement` property:
-- `Off` - No displacement performed
-- `Vertex` - Mesh vertices are displaced
-- `Tessellation` - Mesh is first tessellated for more detail and then displaced
+Localisez la propriété `Armory Render Path - Renderer - Displacement` :
+- `Off` - Aucun déplacement effectué.
+- `Vertex` - Les sommets sont déplacés.
+- `Tessellation` - Le maillage est d'abord "tessellé" pour plus de détails, puis déplacé.
 
-With `Tessellation` selected, the level of tessellation can be set using the `Mesh` and `Shadow` property.
+Avec `Tessellation` sélectionné, le niveau de tessellation peut être défini à l'aide des propriétés `Mesh` et `Shadow`.
 
-Note: Vertices are displaced in normals direction. Use smooth shading (`Space - Shade Smooth`) for meshes with displacement to prevent gabs.
+Note : Les sommets sont déplacés dans le sens des normales. Utilisez un ombrage lisse (`Space - Shade Smooth`) pour les mailles avec déplacement pour éviter les erreures.
 
-When using a height texture map, you can place an `Armory PBR` node and connect the height map to the `Height` socket. Make sure to also connect the `Displacement` sockects.
+Lorsque vous utilisez une heightmap, vous pouvez placer un node `Armory PBR` et connecter la heightmap au noeud `Height`. Assurez-vous de connecter également le `Displacement`.
 
 <img src="./graphics/img/displace.png">
 

@@ -1,118 +1,118 @@
 # Global Illumination
 
-This page presents a quick start guide to let you easily **setup global illumination** in your Armory projects.
+Cette page présente un guide de démarrage rapide pour vous permettre de configurer facilement le **Global Illumination** dans vos projets d'Armory.
 
-Armory features a fully dynamic global illumination technique based on a combination of voxel cone-tracing and screen-space ray-tracing. First, the scene is voxelized and processed into a 3D texture. This data is then used to gather coarse lighting of the scene. Afterwards, screen-space ray-tracing is performed for detail.
+Armory dispose d'une technique d'illumination globale entièrement dynamique basée sur une combinaison du voxel cone-tracing et du screen-space ray-tracing. Tout d'abord, la scène est voxélisée et transformée en une texture 3D. Ces données sont ensuite utilisées pour obtenir un éclairage grossier de la scène. Ensuite, le traçage de l'espace-écran est effectué pour les détails.
 
-- Get the teapots [.blend scene](https://github.com/armory3d/armory_examples/tree/master/voxelgi_teapots) (troll not included!).
+(https://github.com/armory3d/armory_examples/tree/master/voxelgi_teapots) (troll non inclus !).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay ; encrypted-media" allowfullscreen></iframe></iframe>>.
 
-## Requirements
+## Exigences
 
-- A graphics card with **OpenGL 4.5** support (for voxelization).
-- Runs on **Windows** and **Linux**.
-- For Blender 2.79, launch project in **stand-alone window** (F5).
+- Une carte graphique avec **OpenGL 4.5** (pour la voxélisation).
+- Fonctionne sur **Windows** et **Linux**.
+- Pour Blender 2.79, lancez le projet dans  **stand-alone window** (F5).
 
-## Quick start
+## Démarrage rapide
 
-To enable global illumination in your scene using the default settings, set `Armory Render Path - Preset` to `Max (Render)`. Read on to learn about the configuration.
+Pour activer l'éclairage global de votre scène en utilisant les paramètres par défaut, réglez `Armory Render Path - Preset` sur `Max (Render)`. Lisez ce qui suit pour en savoir plus sur la configuration.
 
 ## Voxel AO
 
-Set `Armory Render Path - Global Illumination` to `Voxel AO`.
+Définissez `Armory Render Path - Global Illumination` sur `Voxel AO`.
 
-The cheapest way of utilizing voxels, usable for **ambient occlusion and shadows**. Runs faster and consumes less memory compared to `Voxel GI`.
+La façon la moins chère d'utiliser les voxels, utilisable pour **l'occlusion ambiante et les ombres**. Fonctionne plus rapidement et consomme moins de mémoire par rapport à `Voxel GI`.
 
-- Control the quality using the `Cones` property.
-- Control the intensity using the `Occlusion` property.
-- Tweak tracing parameters using the `Step, Range, Offset` properties.
+- Contrôler la qualité à l'aide de la propriété `Cones`.
+- Contrôler l'intensité à l'aide de la propriété `Occlusion`.
+- Changez les paramètres de traçage en utilisant les propriétés `Step, Range, Offset`.
 
-<img src="./graphics/img/gi/ao.jpg" width="50%">
+<img src="./graphics/img/img/gi/ao.jpg" width="50%">">".
 
 ## Voxel GI
 
-Set `Armory Render Path - Global Illumination` to `Voxel GI`.
+Définissez `Armory Render Path - Global Illumination` sur `Voxel GI`.
 
-Voxel GI enables **indirect diffuse and specular lighting**. This is still a performance heavy feature and should be enabled only on higher-end hardware.
+Voxel GI permet **l'éclairage diffus et spéculaire**. Il s'agit toujours d'une fonction lourde de performance qui ne devrait être activée que sur le matériel haut de gamme.
 
-- Control the quality using the `Cones` property.
-- Control the intensity using the `Diffuse, Specular, Occlusion` properties.
-- Tweak tracing parameters using the `Step, Range, Offset` properties.
-- Control environment map contribution to indirect lighting using `Env Map` property.
+- Contrôlez la qualité à l'aide de la propriété `Cones`.
+- Contrôlez l'intensité à l'aide des propriétés `Diffuse, Specular, Occlusion`.
+- Changez les paramètres de traçage en utilisant les propriétés `Step, Range, Offset`.
+- Changez la contribution de l'environement map aux lumières indirectes à l'aide de la propriété `Env Map`.
 
-<img src="./graphics/img/gi/game.jpg" width="50%">
+<img src="./graphics/img/gi/game.jpg" width="50%">">".
 
 ## Voxel Volume Setup
 
-Locate `Armory Render Path - Global Illumination` property. When set to `Voxel AO` or `Voxel GI`, **voxelization volume** can be configured. 
+Localisez la propriété `Armory Render Path - Global Illumination`. Lorsqu'il est réglé sur `Voxel AO` ou `Voxel GI`, **le volume de voxelisation** peut être configuré. 
 
-- Adjust `Dimensions` to control the volume size. Objects placed out of this volume will not contribute to global illumination. By default, dimensions are set to 16 - meaning a volume of 16x16x16 blender units gets voxelized. This conventionally covers the default 3D grid shown in 3D View viewport.
-- Set `Resolution` to specify amount of voxels used for the volume. For performance, keep this at 128 or below.
-- Reduce the `Resolution Z` multiplier to conserve memory if your scene is mostly flat on the Z axis (like a chess board). With `Resolution Z` set to 0.5, 16x16x8 dimensions will get voxelized.
-- Enable `Revoxelize` property to update voxel volume every frame. In case of mostly static scenes, you can keep this off - moving objects will still receive indirect lighting, but will not affect it.
-- With `Revoxelize` checked, enable `Dynamic Camera` to voxelize scene around the camera. As the camera moves, voxelization volume will move as well, making it possible to cover infinitely big scenes. With `Dynamic Camera` disabled, the volume at the scene origin(0,0,0) gets voxelized.
+- Réglez `Dimensions' pour contrôler la taille du volume. Les objets placés hors de ce volume ne contribueront pas à l'éclairage global. Par défaut, les dimensions sont réglées à 16 - ce qui signifie qu'un volume de 16x16x16x16 unités de mélangeur est voxélisé. Ceci couvre conventionnellement la grille 3D par défaut montrée dans la vue 3D Viewport.
+- Définissez `Résolution' pour spécifier la quantité de voxels utilisés pour le volume. Pour la performance, gardez ce chiffre à 128 ou moins.
+- Réduisez le multiplicateur `Resolution Z` pour conserver la mémoire si votre scène est principalement plate sur l'axe Z (comme un échiquier). Avec `Resolution Z' réglé à 0.5, les dimensions 16x16x8 seront voxélisées.
+- Activer la propriété `Revoxelize` pour mettre à jour le volume de voxel à chaque image. Dans le cas de scènes statiques, vous pouvez désactiver cette fonction - les objets en mouvement recevront toujours un éclairage indirect, mais ne l'affecteront pas.
+- Avec `Revoxelize' coché, activez `Dynamic Camera` pour voxeliser la scène autour de la caméra. Au fur et à mesure que la caméra se déplace, le volume de voxélisation se déplace également, ce qui permet de couvrir des scènes infiniment grandes. Avec `Dynamic Camera` désactivé, le volume à l'origine de la scène (0,0,0,0) est voxélisé.
 
 ## Screen-space ray-tracing
 
-### Ray-traced AO
+#### Ray-traced AO
 
-Set `Armory Render Path - SSGI` to `RTAO`.
+Définissez `Armory Render Path - SSGI` sur `RTAO`.
 
-**Ambient occlusion** will be traced.
+**L'occlusion ambiante** sera tracée.
 
-- Control the quality using the `Rays, Step, Max Steps` properties.
-- Control the intensity using the `Strength` property.
+- Contrôler la qualité à l'aide des propriétés `Rays, Step, Max Steps`.
+- Contrôler l'intensité à l'aide de la propriété `Strength`.
 
-### Ray-traced GI
+#### Ray-traced GI
 
-Set `Armory Render Path - SSGI` to `RTGI`.
+Définissez `Armory Render Path - SSGI` sur `RTGI`.
 
-**Indirect diffuse lighting** will be traced.
+**L'éclairage diffus indirect** sera tracé.
 
-- Control the quality using the `Rays, Step, Max Steps` properties.
-- Control the intensity using the `Strength` property.
+- Contrôler la qualité à l'aide des propriétés `Rays, Step, Max Steps`.
+- Contrôler l'intensité à l'aide de la propriété `Strength`.
 
-### Ray-traced Shadows
+#### Ray-traced Shadows
 
-Small scale **contact shadows** will be traced.
+Les **ombres de contact** à petite échelle seront tracées.
 
-Enable `Armory Render Path - SSRS`.
+Activez `Armory Render Path - SSRS`.
 
-- Increase `Step` in case of artefacts.
+Augmenter la valeur `Step` dans le cas d'artefacts.
 
-### Ray-traced Reflections
+#### Ray-traced Reflections
 
-**Local reflections** will be traced.
+Les **réflexions locales** seront tracées.
 
-Enable `Armory Render Path - SSR`.
+Activez `Armory Render Path - SSR`.
 
-- Increase `Step` in case of artefacts.
+Augmenter la valeur `Step` dans le cas d'artefacts.
 
-## Limitations
+## Limites
 
-There are still severe limitations to be resolved.
+Il y a encore de graves limitations à résoudre.
 
-- Flickers and leaks can occur
-- No multiple voxel volumes to handle big distances yet
-- Voxel GI is GPU heavy
+Des scintillements et des fuites peuvent se produire.
+Pas encore de volumes multiples de voxel pour traiter de grandes distances.
+Voxel GI est un GPU lourd.
 
 ## Baked lighting
 
-With Blender, we have a fully integrated path-tracing engine at hand. For static scenes, you can pre-bake lighting down into lightmaps using the built-in `Armory Bake` tool.
+Avec Blender, nous avons un moteur de traçage entièrement intégré à portée de main. Pour les scènes statiques, vous pouvez pré-calculer l'éclairage en lightmaps à l'aide de l'outil intégré  `Armory Bake`.
 
-- Locate `Properties - Render - Armory Bake` panel.
-- Add objects to be baked or click `Triangle - Add All`.
-- Hit `Bake` to generate lightmaps for all listed objects.
-- Once done, hit `Apply` to restore materials and pack lightmaps.
-- Optionally, set `Armory Render Path - Preset` to `Lightmap`.
-- Run(F5)! Armory picks up baked materials.
+- Localisez le panneau `Properties - Render - Armory Bake`.
+- Ajouter des objets à bake ou cliquer sur `Triangle - Add All`.
+- Appuyez sur `Bake` pour générer des lightmaps pour tous les objets listés.
+- Une fois terminé, cliquez sur `Apply pour restaurer les matériaux et empaqueter les lightmaps.
+- Optionnellement, réglez `Armory Render Path - Preset` sur `Lightmap`.
+- Lancer(F5) ! Armory prendra les materials baker.
 
 
-- Get [example .blend scene](https://github.com/armory3d/archviz_templates/tree/master/baked).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RM2gkM95Kuk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Light probes
 
-**Eevee** in Blender 2.8 spots a light probe support. Thanks to this, you can eventually expect Armory to implement this using the same user interface.
+
+Obtenir le [.blend](https://github.com/armory3d/archviz_templates/tree/master/baked) de ce tutoriel.
