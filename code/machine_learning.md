@@ -1,10 +1,10 @@
 # Machine Learning
 
-*Note: This feature requires Armory 0.4/git. Use [Armory Updater](http://armory3d.org/manual/#/dev/gitversion) to get it now.*
+Note : Cette fonctionnalité nécessite armory 0.4/git. Utilisez[Armory Updater](http://armory3d.org/manual/#/dev/gitversion) pour l'obtenir maintenant.
 
 ## Intro
 
-- Example at [GitHub](https://github.com/armory3d/tensorflow_example)
+- Example sur [GitHub](https://github.com/armory3d/tensorflow_example)
 
 ```haxe
 package arm;

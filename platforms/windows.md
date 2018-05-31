@@ -1,32 +1,32 @@
-# Deploying to Windows
+# Déploiement sous Windows
 
 ## Krom
 
-- Create a new preset in `Armory Exporter` and select `Windows (Krom)` target.
-- Press `Publish`.
-- That's it! Press `Triangle - Open Folder` to view exported files.
+- Créer un nouveau preset dans `Armory Exporter' et sélectionner la cible `Windows (Krom)`.
+- Appuyez sur `Publish`.
+- C'est ça ! Appuyez sur `Triangle - Ouvrir dossier` pour visualiser les fichiers exportés.
 
-## Native (C++)
+## Natif (C+++)
 
-Create a new preset in *Properties - Render - Armory Exporter* and select Windows target. Hit *Publish* to export Visual Studio project files.
+Créez un nouveau preset dans *Properties - Render - Armory Exporter* et sélectionnez la cible Windows. Cliquez sur *Publish* pour exporter les fichiers de projet Visual Studio.
 
-To proceed, install [Visual Studio](https://www.visualstudio.com/vs/community/). Make sure to install components for compiling C++ code. Once installed, open the project located at *blend_file_location/build_projectname/windows-build/project_name.sln*.
+Pour ce faire, installez[Visual Studio](https://www.visualstudio.com/vs/community/). Assurez-vous d'installer des composants pour compiler le code C+++. Une fois installé, ouvrez le projet situé à *blend_file_location/build_project_name/windows-build/project_name.sln*.
 
 ![](/platforms/img/windows/1.jpg)
 
-Next, you can test, debug and profile your project in Visual Studio. When you are ready to export final binary, switch to Release mode and build the project.
+Ensuite, vous pouvez tester, déboguer et profiler votre projet dans Visual Studio. Lorsque vous êtes prêt à exporter le binaire final, passez en mode Release et construisez le projet.
 
 ![](/platforms/img/windows/2.jpg)
 
-Once the build process finishes, copy the resulting binary from *Release* folder (in this case *untitled.exe*) -
+Une fois le processus de compilation terminé, copiez le binaire résultant à partir du dossier *Release* (dans ce cas *untitled.exe*) - -)
 
 ![](/platforms/img/windows/3.jpg)
 
-- to the *blend_file_location/build_projectname/windows* folder which also contains game assets.
+- dans le dossier *blend_file_location/build_projectname/windows* qui contient également des ressources de jeu.
 
 ![](/platforms/img/windows/4.jpg)
 
-You can now package and distribute this folder!
+Vous pouvez maintenant empaqueter et distribuer ce dossier !
 
 ## UWP (Universal Windows Platform)
 

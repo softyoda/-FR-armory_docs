@@ -1,6 +1,6 @@
-# Supported Nodes
+# Nodes supportés
 
-While the plan is to support all of the nodes, not all of them work yet. Currently Armory implements the following ones.
+Bien que le plan consiste à gérer tous les nœuds, tous ne fonctionnent pas encore. Actuellement Armory implémente les suivantes.
 
 ## Cycles material nodes
 

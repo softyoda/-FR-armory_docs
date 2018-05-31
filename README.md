@@ -17,7 +17,7 @@ Armory SDK peut être utiliser sur **Windows**, **Linux** et **macOS**. Les proj
 - [Télécharger le SDK](http://armory3d.org/download.html)
 - [Installer](./getting_started/setup.md)
 - [Playground Tutorial](./getting_started/playground.md)
-- [Tutoriel avec les chars](./getting_started/tanks.md)
+- [Tutoriel avec les tank](./getting_started/tanks.md)
 
 ### Essentiels
 
@@ -31,7 +31,7 @@ Armory SDK peut être utiliser sur **Windows**, **Linux** et **macOS**. Les proj
 - [Material Vault](https://github.com/armory3d/material_vault)
 
 ### License
-Armory est distribué sous[licence zlib](https://github.com/softyoda/armory_docs/blob/master/LICENSE.md). Cela signifie que Armory est libre d'utilisation à toutes fins, y compris le développement de logiciels propriétaires à code source fermé et la vente de copies de votre travail. 
+Armory est distribué sous [licence zlib](https://github.com/softyoda/armory_docs/blob/master/LICENSE.md). Cela signifie que Armory est libre d'utilisation à toutes fins, y compris le développement de logiciels propriétaires à code source fermé et la vente de copies de votre travail. 
 
 ### Contribuer
 

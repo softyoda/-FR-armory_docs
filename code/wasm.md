@@ -2,17 +2,17 @@
 
 ![](/code/img/wasm/0.jpg)
 
-*Note: This feature requires Armory 0.4/git. Use [Armory Updater](http://armory3d.org/manual/#/dev/gitversion) to get it now.*
+Note : Cette fonctionnalité nécessite armory 0.4/git. Utilisez[Armory Updater](http://armory3d.org/manual/#/dev/gitversion) pour l'obtenir maintenant.
 
 ## Intro
 
-[WebAssembly](http://webassembly.org/) (`Wasm`) is a binary instruction format for a stack-based virtual machine, designed as a portable target for compilation of languages like `C`/`C++`/`Rust`.
+[WebAssembly](http://webassembly.org/) (`Wasm`) est un format d'instruction binaire pour une machine virtuelle basée sur une pile, conçue comme une cible portable pour la compilation de langages tels que `C`/`C++`/`Rust`.
 
-Armory can be programmed with `Wasm` for high-performance code execution. Including WebAssembly modules is supported on `HTML5` and `Desktop (Windows, Linux, macOS)` platforms using [Krom](https://github.com/Kode/Krom).
+Armory peut être programmé avec `Wasm` pour une exécution de code de haute performance. L'inclusion des modules WebAssembly est supportée sur les plates-formes `HTML5` et `Desktop (Windows, Linux, macOS)`en utilisant[Krom](https://github.com/Kode/Krom).
 
-## Programming Armory in C
+## Programmez Armory en C
 
-In the following example, we implement a trait (a piece of logic attached to an object) in `C`. This trait rotates a cube placed in the scene:
+Dans l'exemple suivant, nous implémentons un trait (un morceau de logique attaché à un objet) dans `C`. Ce trait fait tourner un cube placé dans la scène :
 
 ```c
 #define WASM_EXPORT __attribute__((visibility("default")))
@@ -37,20 +37,21 @@ int main() {
 	return 0;
 }
 ```
+Vous pouvez compiler cette source `C' dans `Wasm' en direct sur[webassembly.studio](https://webassembly.studio/?f=kl1f79ll4x). Placez le fichier `.wasm' résultant dans le dossier `blend_location/Bundled`.
 
-You can compile this `C` source into `Wasm` live at [webassembly.studio](https://webassembly.studio/?f=kl1f79ll4x). Place the resulting `.wasm` file into the `blend_location/Bundled` folder.
+Sélectionnez le cube et naviguez jusqu'à `Properties - Object - Armory Traits`. Créez un nouveau trait `Wasm` et remplissez la propriété `Module`. Appuyez sur Play(`F5`) et regardez le cube tourner !
 
-Select cube and navigate to `Properties - Object - Armory Traits`. Create a new `Wasm` trait and fill the `Module` property. Hit Play(`F5`) and watch the cube rotate!
+
 
 <a href="./code/img/wasm/1.jpg">![](./code/img/wasm/1.jpg)</a>
 
 
-- Example at [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/c_trait)
+- Example sur [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/c_trait)
 
 
-## Call Wasm from Haxe
+## Appel Wasm depuis Haxe.
 
-For even more flexibility, `wasm` can be called directly from a trait written in `Haxe`. Start with a simple `C` function:
+Pour encore plus de flexibilité, le " wasm " peut être appelé directement à partir d'un trait écrit en " Haxe ". Commencez par une simple fonction "C" :
 
 ```c
 #define WASM_EXPORT __attribute__((visibility("default")))
@@ -60,10 +61,9 @@ float test() {
 	return 0.01f;
 }
 ```
+Vous pouvez compiler cette source `C' dans `Wasm' en direct sur[webassembly.studio](https://webassembly.studio/?f=gkkao6y44ga). Placez le fichier `.wasm' résultant dans le dossier `blend_location/Bundled`.
 
-You can compile this `C` source into `Wasm` live at [webassembly.studio](https://webassembly.studio/?f=gkkao6y44ga). Place the resulting `.wasm` file into the `blend_location/Bundled` folder.
-
-To call `test()` from Haxe:
+Pour appeler `test()`depuis Haxe :
 
 ```haxe
 package arm;
@@ -89,4 +89,4 @@ class MyTrait extends iron.Trait {
 
 ```
 
-- Example at [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/call_wasm)
+- Example sur [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/call_wasm)

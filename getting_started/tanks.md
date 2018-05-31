@@ -44,11 +44,11 @@ Nous attachons un autre arbre logique - gérer la réponse à l'événement **'f
 
 ![](./getting_started/img/tanks/8.jpg)
 
-En jouant la scène maintenant, nous découvrons que les balles tombent du canon jusqu'au sol. Il nous faut de la poudre à feu !
+En jouant la scène maintenant, nous découvrons que les balles tombent du canon jusqu'au sol. Il nous faut de la poudre à canon !
 
 ![](./getting_started/img/tanks/a.jpg)
 
-Appliquer le node Impulse** corrige ce problème. Comme pour faire avancer le tank, nous acquérons le vecteur avant et nous le mettons à l'échelle.
+Appliquer le **node Impulse** corrige ce problème. Comme pour faire avancer le tank, nous acquérons le vecteur avant et nous le mettons à l'échelle.
 
 ![](./getting_started/img/tanks/9.jpg)
 

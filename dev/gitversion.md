@@ -1,17 +1,19 @@
-# Using Git version
+# Utilisation de Git version
 
 ## Armory Updater
 
-Navigate to `File - User Preferences... - Add-ons - Armory`. Before cloning, you may need to install Git first - hit `Install Git` button to open the download page. When installing on Windows, select `Use Git from the Windows Command Prompt` option.
+Naviguez jusqu'à `File - User Preferences... - Add-ons - Armory`. Avant le clonage, vous devrez peut-être installer Git d'abord - cliquez sur le bouton `Install Git` pour ouvrir la page de téléchargement. Lors de l'installation sur Windows, sélectionnez l'option `Use Git from the Windows Command Prompt`.
 
-Afterwards, select `Update SDK` and inspect the command line for details - the process should take just a few seconds. Once done, restart Blender for changes to take effect. If something goes wrong, use `Restore SDK` button to revert the changes.
+Ensuite, sélectionnez `Update SDK' et inspectez la ligne de commande pour plus de détails - le processus ne devrait prendre que quelques secondes. Une fois terminé, redémarrez Blender pour que les changements prennent effet. Si quelque chose ne va pas, utilisez le bouton `Restore SDK` pour annuler les changements.
+
+
 
 ![](/dev/img/gitversion/updater.png)
 
-## Manual clone
+## Clone manuel
 
-- Install [Git](https://git-scm.com/download/win).
-- Pick a location for cloning the sdk and open a terminal/command line here.
+- Installer [Git](https://git-scm.com/download/win).
+- Choisissez un emplacement pour cloner le sdk et ouvrez un terminal/une ligne de commande ici.
 
 ```
 git clone --recursive https://github.com/armory3d/armsdk
@@ -19,9 +21,9 @@ cd armsdk
 git submodule foreach --recursive git pull origin master
 ```
 
-- In Blender, navigate to `File - User Preferences... - Add-ons - Armory`. Uncheck `Bundled SDK` and set path to the newly cloned `armsdk` folder.
+- Dans Blender, naviguez jusqu'à `File - User Preferences... - Add-ons - Armory`. Uncheck `Bundled SDK` et indiquez le chemin d'accès au dossier `armsdk` nouvellement cloné.
 
-#### Updating
+#### Mettre à jour
 
 ```
 cd armsdk
@@ -31,7 +33,7 @@ git pull origin master
 
 ---
 
-### Going deeper:
+### Pour ller plus loin:
 
-- You may rebuild Krom: https://github.com/Kode/Krom
-- You may rebuild Blender itself with integrated Krom: https://github.com/armory3d/krom_blender
+- Vous pouvez reconstruire Krom : https://github.com/Kode/Krom
+- Vous pouvez reconstruire Blender lui-même avec Krom intégré : https://github.com/armory3d/krom_blender

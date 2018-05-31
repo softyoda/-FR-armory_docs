@@ -1,16 +1,17 @@
 # Logic Nodes
 
-## Creating custom nodes
+## Création de nodes personnalisés
 
-### Create a library
+### Créer une librairie
 
-We will make a new library to store the sources of custom logic nodes and keep them portable with no modifications to engine sources.
+Nous allons créer une nouvelle librairie pour stocker les sources des nodes logiques personnalisés et les garder portables sans modification des sources du moteur.
 
-Locate your blend file and create a new `Libraries` folder alongside it. Navigate to the `Libraries` folder and create a new `mynodes` folder in it.
+Localisez votre fichier .blend et créez un nouveau dossier `Libraries` à côté. Naviguez jusqu'au dossier  `Libraries`  et créez-y un nouveau dossier `mynodes`.
+
 
 ### Python
 
-Start by creating the logic node definition for Blender. Create a file named `blender.py` in `Libraries/mynodes` folder. Armory automatically picks this file up once the library is loaded. Define a simple node with single in/out socket.
+Commencez par créer la définition de node logique pour Blender. Créez un fichier nommé `blender.py' dans le dossier `Libraries/mynodes'. Armory récupère automatiquement ce fichier une fois que la bibliothèque est chargée. Définir un node simple avec une seule prise d'entrée/sortie.
 
 ```py
 from bpy.types import Node
@@ -34,13 +35,13 @@ def register():
     arm.nodes_logic.register_nodes()
 ```
 
-Restarting Blender and loading the project again, the new logic node is available for placement.
+Redémarrer Blender et charger à nouveau le projet, le nouveau node logique est disponible.
 
 ![](/dev/img/logicnodes/1.png)
 
 ### Haxe
 
-Before the project can be run, we need to implement the actual node logic in Haxe. When the node gets executed, we let it print a 'Hello, World!' string.
+Avant que le projet puisse être exécuté, nous avons besoin d'implémenter la logique de node réelle dans Haxe. Lorsque le node est exécuté, nous lui permettons d'afficher un 'Hello, World!' !
 
 ```hx
 package armory.logicnode;
@@ -61,17 +62,16 @@ class TestNode extends LogicNode {
 }
 ```
 
-Done!
 
-### Where to next
+### Aller plus loin
 
-- Example project:
+- Exemple de projet:
 https://github.com/armory3d/armory_examples/tree/master/dev_logicnode
 
-When implementing new logic nodes, it is easy to browse the sources of existing nodes as a reference.
+Lors de l'implémentation de nouveaux nodes logiques, il est facile de parcourir les sources des nodes existants comme référence.
 
-- Python definitions of Armory nodes:
+- Définitions Python des nodes d'Armory :
 https://github.com/armory3d/armory/tree/master/blender/arm/logicnode
 
- - Haxe counterparts:
+ - Equivalents Haxe :
 https://github.com/armory3d/armory/tree/master/Sources/armory/logicnode

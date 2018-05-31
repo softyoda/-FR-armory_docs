@@ -7,7 +7,7 @@ Les matériaux sont construits avec des[nodes de cycles](https://docs.blender.or
 
 ## Displacement
 
-Localisez la propriété `Armory Render Path - Renderer - Displacement` :
+Trouvez la propriété `Armory Render Path - Renderer - Displacement` :
 - `Off` - Aucun déplacement effectué.
 - `Vertex` - Les sommets sont déplacés.
 - `Tessellation` - Le maillage est d'abord "tessellé" pour plus de détails, puis déplacé.
@@ -16,7 +16,7 @@ Avec `Tessellation` sélectionné, le niveau de tessellation peut être défini 
 
 Note : Les sommets sont déplacés dans le sens des normales. Utilisez un ombrage lisse (`Space - Shade Smooth`) pour les mailles avec déplacement pour éviter les erreures.
 
-Lorsque vous utilisez une heightmap, vous pouvez placer un node `Armory PBR` et connecter la heightmap au noeud `Height`. Assurez-vous de connecter également le `Displacement`.
+Lorsque vous utilisez une heightmap, vous pouvez placer un node `Armory PBR` et connecter la heightmap au node `Height`. Assurez-vous de connecter également le `Displacement`.
 
 <img src="./graphics/img/displace.png">
 

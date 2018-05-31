@@ -27,15 +27,6 @@ De plus, vous pouvez modifier les `Dimensions - Résolution` pour la taille de l
 
 ### Objets
 
-We will start with some Blender basics on how to manipulate scene objects:
-
-- In 3D View, hit `Space` and type `Add Plane` to create a plane object (or do `Add - Mesh - Plane` from the 3D View header).
-- Press `S` to scale up the plane, `R` to rotate, or `G` to grab and translate.
-- Select objects with `right-click`.
-- Delete objects by pressing `X`.
-
-
-
 Nous allons commencer par quelques notions de base de Blender sur la manipulation des objets de la scène :
 
 - Dans la vue 3D, cliquez sur " Espace " et tapez " Ajouter un plan " pour créer un objet plan (ou faites " Ajouter - Mesh - Plan " à partir de l'en-tête de la vue 3D).
@@ -63,7 +54,6 @@ Dans l'onglet Material, créez un nouveau material. Passez à Node Editor comme 
 ![](./getting_started/img/playground/grid_base.png)
 ![](./getting_started/img/playground/grid_rough.png)
 
-Save the images above and simply drag-and-drop the files onto the node canvas in Blender. Connect the `Image Texture` nodes to the `Base Color` and `Roughness` sockets.
 Sauvegardez les images ci-dessus et glissez-déposez simplement les fichiers dans le node editor sur Blender. Connectez les nodes `Image Texture` aux sockets `Base Color` et `Roughness`.
 
 <a href="./getting_started/img/playground/3.jpg">![](./getting_started/img/playground/3.jpg)</a>
@@ -74,8 +64,7 @@ A la suite de ces étapes, une scène de base se dessine déjà. Appuyez sur `F5
 
 ### Animation
 
-Let's create an animation rotating the cube. Locate the `Timeline` and go to frame 1. Select Cube and press `I - Rotation` to insert keyframes for the rotation. Next, go to frame 60 in the timeline. With Cube selected, press `R` to rotate it desired amount and press `I - Rotation` again.
-Créez une animation qui fait tourner le cube. Localisez la `Timeline` et allez à la frame 1. Sélectionnez Cube et appuyez sur `I - Rotation` pour insérer les images-clés pour la rotation. Ensuite, allez à la frame 60 dans la timeline. Lorsque le Cube est sélectionné, appuyez sur `R` pour le faire pivoter a la position désirée et appuyez à nouveau sur `I - Rotation`.
+Créons une animation qui fait tourner le cube. Localisez la `Timeline` et allez à la frame 1. Sélectionnez Cube et appuyez sur `I - Rotation` pour insérer les images-clés pour la rotation. Ensuite, allez à la frame 60 dans la timeline. Lorsque le Cube est sélectionné, appuyez sur `R` pour le faire pivoter a la position désirée et appuyez à nouveau sur `I - Rotation`.
 
 
 <a href="./getting_started/img/playground/6.jpg">![](./getting_started/img/playground/6.jpg)</a>
@@ -87,8 +76,6 @@ Sélectionnez l'objet lampe dans la hiérarchie et passez à l'onglet `Data`. Vo
 <a href="./getting_started/img/playground/9.jpg">![](./getting_started/img/playground/9.jpg)</a>
 
 ### Environnement
-
-World nodes are used to setup the environment. Switch to `Node Editor - World Nodes` to access the nodes. In this tutorial, we use `Sky Texture` node to render procedural sky. If we were to add an environment map, we would use the `Environment Texture` node with `.hdr` file.
 
 Les "World nodes" sont utilisés pour configurer l'environnement. Passez à `Node Editor - World Nodes` pour accéder aux nodes (icone rond bleu). Dans ce tutoriel, nous utilisons le noeud `Sky Texture` pour rendre le ciel procédural. Si nous devions ajouter une texture d'environment, nous utiliserions le noeud `Environment Texture` avec le fichier `.hdr`.
 
@@ -119,13 +106,6 @@ In this tutorial, we are using an animated `.fbx` model from [mixamo](http://mix
 
 Les nodes logiques fournissent un moyen visuel de créer des scènes interactives. Lorsque vous construisez votre projet, les nodes créés sont automatiquement compilés en scripts.
 
-The system consists of 5 essential categories:
-- `Events` - nodes where execution starts, triggered by desired event
-- `Actions` - once an event is triggered, these nodes take action
-- `Logic` - nodes used to control execution flow, using branching, loops, gates..
-- `Variables` - nodes used to store data in a logic tree
-- `Values` - nodes used to retrieve data from other objects
-
 Le système se compose de 5 catégories essentielles :
 - `Events` - node où l'exécution commence, déclenchée par l'événement désiré.
 - `Actions` - s'active une fois qu'un événement est déclenché.
@@ -146,7 +126,6 @@ Vous pouvez parcourir tous les nodess disponibles via l'élément de menu `Add`,
 - Ajouter un autre nodes `Math`, en mettant à l'échelle la sortie sinusoïdale.
 - Nous garderons les emplacements `Y` et `Z` inchangés.
 
-Each node tree has to be attached to an object. Select Cylinder and create new trait in `Properties - Object - Armory Traits`. Set type to `Nodes` and enter our newly created node tree as `Tree` entry.
 Chaque nodes doit être attaché à un objet. Sélectionnez Cylindre et créez un nouveau trait dans `Properties - Object - Armory Traits`. Définissez le type sur `Nodes` et entrez notrs nodes nouvellement créé en tant qua `Tree`.
 
 <a href="./getting_started/img/playground/12.jpg">![](./getting_started/img/playground/12.jpg)</a>

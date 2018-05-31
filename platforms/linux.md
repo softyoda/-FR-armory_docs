@@ -1,23 +1,23 @@
-# Deploying to Linux
+# Déploiement sous Linux
 
 ## Krom
 
-- Create a new preset in `Armory Exporter` and select `Linux (Krom)` target.
-- Press `Publish`.
-- That's it! Press `Triangle - Open Folder` to view exported files.
+- Créer un nouveau preset dans `Armory Exporter' et sélectionner la cible `Linux (Krom)`.
+- Appuyez sur " Publier ".
+- C'est ça ! Appuyez sur `Triangle - Ouvrir dossier` pour visualiser les fichiers exportés.
 
-## Native (C++)
+## Natif (C+++)
 
-For the C++ compilation to succeed you might need to install some additional packages - read more at [Kha/Wiki](https://github.com/Kode/Kha/wiki/Linux).
+Pour que la compilation C+++ réussisse, il se peut que vous ayez besoin d'installer des paquets supplémentaires - lisez plus à[Kha/Wiki].(https://github.com/Kode/Kha/wiki/Linux).
 
-Create a new preset in *Properties - Render - Armory Exporter* and select Linux target. Hit *Publish* to export build files.
+Créez un nouveau preset dans *Properties - Render - Armory Exporter* et sélectionnez Linux target. Cliquez sur *Publier* pour exporter les fichiers de compilation.
 
-Afterwards, you can compile the project using the generated makefile in *blend_file_location/build_projectname/linux-build/Release* or using the [Code::Blocks](http://codeblocks.org) project located at *blend_file_location/build_projectname/linux-build*.
+Ensuite, vous pouvez compiler le projet en utilisant le fichier makefile généré dans *blend_file_location/build_projectname/linux-build/Release* ou en utilisant le projet[Code::Blocks](http://codeblocks.org) situé à *blend_file_location/build_projectname/linux-build*.
 
-In order for the resources to load correctly you will need to copy the executable into the folder with all the game's resources.
+Pour que les ressources se chargent correctement, vous devrez copier l'exécutable dans le dossier contenant toutes les ressources du jeu.
 
-To do this simply copy the executable from *blend_file_location/build_projectname/linux-build/Release* into *blend_file_location/build_projectname/linux*.
+Pour ce faire, il suffit de copier l'exécutable de *blend_file_location/build_projectname/linux-build/Release* dans *blend_file_location/build_projectname/linux*.
 
 ![](/platforms/img/linux/1.png)
 
-You can now run and package your game!
+Vous pouvez maintenant exécuter et empaqueter votre jeu !

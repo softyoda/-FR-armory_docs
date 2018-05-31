@@ -1,12 +1,12 @@
 # RenderDoc
 
-- Install from https://renderdoc.org/
-- On Windows, export to `Windows (Krom)` target using the `Direct3D11` graphics API
+- Installer à partir de https://renderdoc.org/
+- Sous Windows, exporter vers la cible `Windows (Krom)`en utilisant l'API graphique `Direct3D11`.
 
 ![](./tooling/img/rdoc/0.png)
 
-- Press `Publish`
-- Press `Triangle - Open in RenderDoc`
-- Hit `Launch` in RenderDoc to start debugging!
+- Appuyez sur `Publish`
+- Appuyez sur `Triangle - Open in RenderDoc`
+- Cliquez sur `Launch` dans RenderDoc pour commencer le débogage !
 
 ![](./tooling/img/rdoc/1.jpg)

@@ -1,17 +1,17 @@
-# Generate mesh
+# Générer un mesh
 
-This page describes how to dynamically generate mesh object at runtime using a trait script.
+Cette page décrit comment générer dynamiquement un mesh au moment de l'exécution en utilisant un script de trait de caractère.
 
-Setup a simple scene with single plane in the center. Assign default material and create a static rigid body for the plane.
+Mettre en place une scène simple avec un plane au centre. Assigner le matériau par défaut et créer un ridigy body statique pour le plane.
 
 ![](/code/img/generate_mesh/0.jpg)
 
-Now we can start writing a trait that will dynamically generate a mesh and spawn it in the scene. For this example Haxe is used.
+Maintenant, nous pouvons commencer à écrire un trait qui va générer dynamiquement un maillage et le faire apparaître dans la scène. Pour cet exemple, on utilise Haxe.
 
-Select Camera and attach a new trait using **Object tab - Armory Traits - +**. Hit **New Script** and name it **BoxGenerator**.
+Sélectionnez Caméra et attachez un nouveau trait de caractère à l'aide de **Object tab - Armory Traits - +**. Cliquez sur  **New Script** et donnez-lui un nom : **BoxGenerator**.
 ![](/code/img/generate_mesh/1.jpg)
 
-Pressing **Edit Script** will open our new trait script in **Kode Studio**. Example code below will generate a simple box, attach a rigid body trait and spawn it on the plane after pressing input.
+Appuyez sur **Edit Script** pour ouvrir notre nouveau script de trait de caractère dans **Kode Studio**. L'exemple de code ci-dessous générera une boîte simple, attachera un trait de corps rigide et le reproduira sur le plan après avoir appuyé sur l'entrée.
 
 ```hx
 package arm;
@@ -99,8 +99,8 @@ class BoxGenerator extends iron.Trait {
 }
 ```
 
-Hit **Play in Viewport** to verity [results](http://armory3d.org/demo/generate_mesh)!
 
+Appuyer sur **Play in Viewport** pour vérifier le [résultat](http://armory3d.org/demo/generate_mesh) !
 ![](/code/img/generate_mesh/2.jpg)
 
-Get the blend file at [GitHub](https://github.com/armory3d/armory_examples/tree/master/script_genmesh).
+Obtenez le fichier .blend sur[GitHub](https://github.com/armory3d/armory_examples/tree/master/script_genmesh).

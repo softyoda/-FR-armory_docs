@@ -109,10 +109,11 @@ Avec Blender, nous avons un moteur de traçage entièrement intégré à portée
 - Lancer(F5) ! Armory prendra les materials baker.
 
 
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RM2gkM95Kuk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Light probes
+
+Depuis la 2.8, blender supporte les Light probes. Grâce à cela, vous pouvez vous attendre à ce qu'Armory implémente cela en utilisant la même interface utilisateur.
 
 
 Obtenir le [.blend](https://github.com/armory3d/archviz_templates/tree/master/baked) de ce tutoriel.

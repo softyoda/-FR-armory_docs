@@ -1,21 +1,21 @@
-# Supported Particles
+# Particules supportées
 
-Particle systems are currently in experimental stage and will be further improved.
+Les systèmes de particules sont actuellement au stade expérimental et seront encore améliorés.
 
-## Setup
+## Mise en place
 
-CPU simulation is effective to emit high-poly meshes, while GPU is effective to simulate hordes of lower poly meshes or accessing `Particle Info`s. The rendering itself is always done using GPU instancing.
+La simulation CPU est efficace pour les mesh high-poly, tandis que le GPU est efficace pour simuler des hordes mesh low poly ou pour accéder aux `Particle Info`. Le rendu lui-même se fait toujours en utilisant l'instanciation GPU.
 
-To enable GPU particle simulation:
-- Check `Properties - Particle System - Armory Props - GPU Simulation`.
-- Select referenced *Dupli Object* (object being emitted) and set `Properties - Materials - Armory Props - Particle` to `GPU`.
-- This setup will be eventually automated
+Pour activer la simulation de particules GPU :
+- Cochez `Properties - Particle System - Armory Props - GPU Simulation`.
+- Sélectionnez *Dupli Object* (objet émis) et réglez `Properties - Materials - Armory Props - Particle` sur `GPU`.
+- Cette configuration sera éventuellement automatisée.
 
-To enable CPU particle simulation:
-- Select referenced *Dupli Object* (object being emitted) and set `Properties - Materials - Armory Props - Particle` to `CPU`.
-- This setup will be eventually automated
+Pour activer la simulation de particules CPU :
+- Sélectionnez *Dupli Object* (objet émis) et réglez `Properties - Materials - Armory Props - Particle` sur `CPU`.
+- Cette configuration sera éventuellement automatisée.
 
-## Features
+## Fonctionnalités
 
 - Type (Emitter, Hair)
 - Seed

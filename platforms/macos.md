@@ -1,21 +1,21 @@
-# Deploying to macOS
+# Déploiement sur macOS
 
 ## Krom
 
-- Create a new preset in `Armory Exporter` and select `MacOS (Krom)` target.
-- Press `Publish`.
-- That's it! Press `Triangle - Open Folder` to view exported files.
+Créer un nouveau preset dans `Armory Exporter' et sélectionner la cible `MacOS (Krom)`.
+Appuyez sur " Publier ".
+C'est ça ! Appuyez sur `Triangle - Open Folder` pour visualiser les fichiers exportés.
 
-## Native (C++)
+## Natif (C+++)
 
-Create a new preset in *Properties - Render - Armory Exporter* and select MacOS target. Hit *Publish* to export XCode project files.
+Créez un nouveau preset dans *Properties - Render - Armory Exporter* et sélectionnez MacOS target. Cliquez sur *Publish* pour exporter les fichiers de projet XCode.
 
-To proceed, install [XCode](https://developer.apple.com/xcode/). Once installed, open the project located at *blend_file_location/build_projectname/osx-build/projectname.xcodeproj*.
+Pour continuer, installez[XCode].(https://developer.apple.com/xcode/). Une fois installé, ouvrez le projet situé à *blend_file_location/build_projectname/osx-build/projectname.xcodeproj*.
 
 ![](/platforms/img/macos/1.jpg)
 
-Next, you can test, debug and profile your project in XCode.
+Ensuite, vous pouvez tester, débugger  et profiler votre projet dans XCode.
 
 ![](/platforms/img/macos/2.jpg)
 
-When you are ready to export final binary, press Menu - Product - Archive.
+Lorsque vous êtes prêt à exporter le binaire final, appuyez sur Menu - Produit - Archive.

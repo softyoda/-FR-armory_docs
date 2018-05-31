@@ -1,280 +1,285 @@
 # Reference
 
-## Activators
+## Activateurs
 
 ### On Init
 
-Activates the node\(s\) being connected to it on the first frame of the game.
+Active les node\(s\) qui y sont connectés sur la première image du jeu.
 
 ![](/assets/On-Init.JPG)
 
 
 ### On Timer
 
-Activates the node\(s\) being connected to after a Timer countdown on from the beginning of the game, repeatedly when box ticked.
+Active les node\(s\) auquel est connecté après un compte à rebours à partir du début du jeu, de façon répétée lorsque la case est cochée.
 
 ![](/assets/On-Timer.JPG)
 
 
 ### On Mouse
 
-Activates the node\(s\) being connected to it when the set Mouse-button is being started, held down or released, depending on settings.
+Active les node\(s\) qui y sont connectés lorsque le bouton de la souris est démarré, maintenu enfoncé ou relâché, selon les réglages.
 
 ![](/assets/On-Mouse.JPG)
 
 
 ### On Keyboard
 
-Activates the node\(s\) being connected to it when the set Keyboard-button is being started, held down or released, depending on settings.
+Active les node\(s\) qui y sont connectés lorsque le bouton de la souris est démarré, maintenu enfoncé ou relâché, selon les réglages.
 
 ![](/assets/On-Keyboard.JPG)
 
 
 ### On Update
 
-Activates the node\(s\) being connected to it every frame.
+Active les node\(s\) qui y sont connectés à chaque image.
 
 ![](/assets/On-Update.JPG)
 
 
 ### On Volume Trigger
 
-The lower object-input is used as Volume, the upper one as object-input for the object that enters/leaves/overlaps with it. 
+L'entrée objet inférieure est utilisée comme volume, l'entrée objet supérieure comme entrée objet pour l'objet qui entre, quitte ou chevauche avec lui. 
 
-Enter-mode: Activates the connected nodes on the frame the object enters the volume, on all other frames it doesn't do that.
 
-Leave-mode: Activates the connected nodes on the frame the object leaves the volume, on all other frames it doesn't do that.
+Enter-mode: Active les nœuds connectés sur le cadre, l'objet entre dans le volume, sur tous les autres cadres, il ne le fait pas.
 
-Overlap-mode: Activates the connected nodes on the frame the object overlaps with the volume, on all other frames it doesn't do that.
+Leave-mode: Active les nœuds connectés sur le cadre, l'objet quitte le volume, sur tous les autres cadres, il ne le fait pas.
+
+Overlap-mode: Active les nœuds connectés sur le cadre, l'objet chevauche le volume, mais sur tous les autres cadres, il ne le fait pas.
 
 ![](/assets/on-volume-trigger.JPG)
 
 
-## Logic
+## Logique
 
 ### Alternate
 
-Alternates between its activated outputs to pass through its input when it is being re-activated.  
+Alterne entre ses sorties activées pour passer par son entrée lorsqu'elle est réactivée.  
 
 ![](/assets/Alternate.JPG)
 
 
 ### Gate
 
-Logic nodes way to do "if" statements. When activated, it compares if its two inputs are being Equal, Greater Equal, Less Equal, or Not Equal, regardless of variable type, and passes through its red input if the set state is the case.
+Les nœuds logiques permettent de faire des instructions "if". Lorsqu'elle est activée, elle compare si ses deux entrées sont égales, plus grandes égales, moins égales ou non égales, quel que soit le type de variable, et passe par son entrée rouge si l'état de l'ensemble est le cas.
 
-"And" and "Or" are being used for booleans only, and pass through the input when both bools are true \(and\) or at least one \(or\).
+"And" et "Or" ne sont utilisés que pour les bools, et passent par l'entrée lorsque les deux bools sont vrais (And) ou au moins un (Or).
 
 ![](/assets/Gate.JPG)
 
 
 ### Not
 
-Inverts a plugged in boolean, so if its input is "true" it outputs "false".
+Inverse le booléen branché, donc si son entrée est "true" il sort "false".
 
 ![](/assets/Not.JPG)
 
 
 ### Sleep
 
-Activates the node connected with its output after the float value in secounds after it was activated itself.
+Active le node connecté avec sa sortie après la valeur flottante en secondes après qu'il a été activé lui-même.
 
 ![](/assets/sleep.JPG)
 
 
 ### Branch
 
-When activated, activates its "True" or "False" output, according to the state of the plugged in boolean.
+Lorsqu'il est activé, il active sa sortie "True" ou "False", en fonction de l'état du booléen branché.
 
 ![](/assets/Branch.JPG)
 
 
 ### Is True/False
 
-Passes through its activation only if the plugged in boolean is "True"/"False", according to the node.![](/assets/Is-true_false.JPG)
+Passe par son activation uniquement si le booléen branché est "True"/"False", selon le node.!
+
+[](/assets/Is-true_false.JPG)
 
 
 ### Merge
 
-The "New" button creates new inputs, the "X" one deletes the most bottom one. If it receives on activation from any of its inputs, it will activate its output.
+Le bouton "Nouveau" crée de nouvelles entrées, le bouton "X" efface la plus basse. S'il reçoit à l'activation de l'une de ses entrées, il activera sa sortie.
 
 ![](/assets/Merge.JPG)
 
 
-## States
+## États
 
 ### Mouse
 
-Outputs a bool if the set button is being currently started, hold down, released, moved \(true\) or not \(false\).
+Sortie d'un bool si le bouton de réglage est en cours de démarrage, maintenu enfoncé, relâché, déplacé \(true\) ou non \(false\).
 
 ![](/assets/Mouse.JPG)
 
 
 ### Mouse Cords
 
-Outputs the X,Y location of the mouse on screen and its movement as Vector, and an integer if the scroll wheel es been moved up \(1\) or moved down \(-1\) this frame.
+Affiche l'emplacement X,Y de la souris à l'écran et son mouvement en tant que vecteur, et un entier si la molette de défilement a été déplacée vers le haut \(1\) ou vers le bas \(-1\) a la frame actuelle.
 
 ![](/assets/Mouse-Cords.JPG)
 
 
 ### Keyboard
 
-Outputs a bool if the set button is being currently started, hold down, released, \(true\) or not \(false\).
+Sortie d'un bool si le bouton de réglage est actuellement démarré, maintenu enfoncé, relâché, \(true\) ou non \(false\).
 
 ![](/assets/Keyboard.JPG)
 
 
 ### Get Transform
 
-Outputs the current transform of the set object. An objects Transform consists out of Vectors for its global location, rotation and scale.
+
+Affiche la transformation courante de l'objet défini. Une Transformation d'objets se compose de Vecteurs pour sa position globale, sa rotation et son échelle.
 
 ![](/assets/get-transform.JPG)
 
 
 ### Get Location
 
-Outputs the current global location of the set object as vector.
+Sortie de l'emplacement global actuel de l'objet défini en tant que vecteur.
 
 ![](/assets/get-location.JPG)
 
 
 ### Get Rotation
 
-Outputs the current rotation of the set Object as a Vector.
+Affiche la rotation actuelle de l'objet défini en tant que vecteur.
 
 ![](/assets/get-rotation.JPG)
 
 
 ### Get Scale
 
-Outputs the current scale of the set object as vector.
+Sortie de l'échelle actuelle de l'objet défini en tant que vecteur.
 
 ![](/assets/get-scale.JPG)
 
 
 ### Get Object
 
-Searches for an object with the set name in the scene and outputs it.
+Recherche un objet avec le nom de l'ensemble dans la scène et l'édite.
 
 ![](/assets/get-object.JPG)
 
 
 ### Get Visible
 
-Outputs a Boolean Value according to the objects current visibility setting in the Outliner. False if invisible, True if visible, even if the Object is not on camera right now.
+Sortie d'une valeur booléenne en fonction du réglage de visibilité actuelle des objets dans l'Outliner. Faux si invisible, Vrai si visible, même si l'Objet n'est pas sur la caméra en ce moment.
 
 ![](/assets/get-visible.JPG)
 
 
 ### Get Child
 
-Searches for object with the set name that is currently a child of the set object and outputs it.
+Recherche l'objet avec le nom de l'ensemble qui est actuellement un enfant de l'objet et l'affiche.
 
 ![](/assets/get-child.JPG)
 
 
 ### Get Children
 
-Outputs all current children of the set object as array of objects.
+Sortie de tous les enfants actuels de l'objet défini en tant qu'array d'objets.
 
 ![](/assets/get-children.JPG)
 
 
 ### Get Parent
 
-Outputs the current closest parent of the set object.
+Sortie du parent courant le plus proche de l'objet défini.
 
 ![](/assets/get-parent.JPG)
 
 
 ### Get Group
 
-Searches for a group of objects with the set name and outputs it as an array of objects.
+Recherche un groupe d'objets avec le nom de l'ensemble et l'édite sous forme d'array d'objets.
 
 ![](/assets/get-group.JPG)
 
 
 ### Group
 
-Outputs all objects in the set group as array.
+Affiche tous les objets du groupe défini sous forme de tableau.
 
 ![](/assets/group.JPG) 
 
 
 ### Get Distance
 
-Outputs the current distance between the two set objects as float.
+Affiche la distance actuelle entre les deux objets (float).
 
 ![](/assets/get-distance.JPG)
 
 
 ### Get Trait
 
-Searches for a Trait with the set name which is applied on the set object and outputs it.
+Recherche un caractère avec le nom de l'ensemble qui est appliqué sur l'objet défini et l'édite.
 
 ![](/assets/get-trait.JPG)
 
 
 ### Active Camera
 
-Outputs the current active Camera in your game as object.
+Sortie de la caméra active dans votre jeu en tant qu'objet.
 
 ![](/assets/active-camera.JPG)
 
 
 ### Active Scene
 
-Outputs the currently active scene in your game.
+Sortie de la scène actuellement active dans votre jeu.
 
 ![](/assets/active-scene.JPG)
 
 
 ### Volume Trigger
 
-The lower object-input is used as Volume, the upper one as object-input for the object that enters/leaves/overlaps with it.
+L'entrée objet inférieure est utilisée comme Volume, l'entrée objet supérieure comme entrée objet pour l'objet qui entre, quitte ou chevauche avec lui
 
-Enter-mode: Outputs true on the frame the object enters the volume, on all other frames it outputs false.
+Enter-mode: Sortie vrai sur la frame l'objet entre dans le volume, sur toutes les autres frames il sort faux.
 
-Leave-mode: Outputs true on the frame the object leaves the volume, on all other frames it outputs false.
+Leave-mode: Sortie vrai sur la frame l'objet quitte le volume, sur toutes les autres frames il sort faux.
 
-Overlap-mode: Outputs true on the frames the object overlaps with the volume, on all other frames it outputs false.
+Overlap-mode: Sortie vrai sur la frame l'objet chevauche le volume, sur toutes les autres frames il sort faux.
+
 
 ![](/assets/Volume-trigger.JPG)
 
 
-## Values and Variables
+## Valeurs et variables
 
 ### Global Object
 
-Gives access to an global Object, which can be used to share information between different Traits.
+Donne accès à un objet global, qui peut être utilisé pour partager des informations entre différents Traits.
 
 ![](/assets/global-object.JPG)
 
 
 ### Get Property
 
-Can be used to receive Properties of other objects, which were set with the "[Set Property](/logic-nodes/set-property.md)" node. The properties name and object have to match the inputs of this node.
+Peut être utilisé pour recevoir les propriétés d'autres objets, qui ont été définis avec le noeud "[Set Property](/logic-nodes/set-property.md)". Le nom des propriétés et l'objet doivent correspondre aux entrées de ce node.
 
 ![](/assets/Get-property.JPG)
 
 
 ### Integer
 
-Stores an integer value. These are whole numbers.
+Enregistre une valeur entière. Ce sont des nombres entiers.
 
 ![](/assets/Integer.JPG)
 
 
 ### Float
 
-Stores a Float value. A Float variable is a number with a limited number of decimals. If your number has more than 3 decimals, the value displayed will be rounded, but when you click on it you can still see the whole number, which will also be used in the game.
+Enregistre une valeur flottante. Une variable flottante est un nombre avec un nombre limité de décimales. Si votre nombre a plus de 3 décimales, la valeur affichée sera arrondie, mais lorsque vous cliquez dessus, vous pouvez toujours voir le nombre entier, qui sera également utilisé dans le jeu.
 
 ![](/assets/float.JPG)
 
 
 ### Boolean
 
-Stores a Boolean value. A Boolean value is has just two states: True and False.
+Enregistre une valeur booléenne. Une valeur booléenne n'a que deux états : Vrai et Faux.
 
 ![](/assets/boolean.JPG)
 
@@ -283,21 +288,21 @@ Stores a Boolean value. A Boolean value is has just two states: True and False.
 
 ### Set Variable
 
-When activated, updates the first plugged in Variable to the Value of the second. Automatically converts some variable types.
+Lorsqu'il est activé, il met à jour la première variable branchée à la valeur de la seconde. Convertit automatiquement certains types de variables.
 
 ![](/assets/set-variable.JPG)
 
 
 ### Translate Object
 
-Moves the set object every frame it is activated by the given Vector.
+Déplace l'objet défini à chaque fois qu'il est activé par le vecteur donné.
 
 ![](/assets/translate-object.JPG)
 
 ### Set Property
 
-When activated, sets or updates a Property of the given object named after its string input to the Value of its general Variable input \(the green one\). You do not have to worry about the variable type, you can plug everything it apart from activations. 
+Lorsqu'il est activé, définit ou met à jour une Propriété de l'objet donné nommé d'après son entrée de chaîne de caractères à la Valeur de son entrée de Variable générale \(la verte\). Vous n'avez pas à vous soucier du type variable, vous pouvez tout brancher à part les activations. 
 
-This node can be used to share Variables between different Traits. If the trait\(s\) you want to access the variable with are on different objects, use the "[Global Object](/logic-nodes/global-object.md)" node to store the data. Every trait can access this one.
+Ce nœud peut être utilisé pour partager des Variables entre différents Traits. Si le trait\(s\) avec lequel vous voulez accéder à la variable se trouve sur différents objets, utilisez le noeud "[Global Object](/logic-nodes/global-object.md)" pour stocker les données. Chaque trait de caractère peut accéder à celui-ci.
 
 ![](/assets/set-property.JPG)

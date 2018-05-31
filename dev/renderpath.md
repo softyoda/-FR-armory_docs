@@ -1,22 +1,23 @@
 # Render Path
 
-*This page is work in progress - most of the manual labor described here is to be automated.*
+*Cette page est en cours d'élaboration - la plupart des travaux manuels décrits ici doivent être automatisés.*
 
-Armory is powered by a scriptable render path system. This allows us to manage both forward & deferred renderers and easily extend it with addional passes while introducing the least possible overhead and reusing existing resources. The engine is also prepared for adding new renderer types.
+Armory est alimenté par un système de chemin de rendu scriptable. Cela nous permet de gérer à la fois les rendus avancés et différés et de les étendre facilement avec des passes supplémentaires tout en introduisant le moins de frais possible et en réutilisant les ressources existantes. Le moteur est également préparé pour l'ajout de nouveaux types de rendus.
 
-Render path is built when the game itself is being compiled. When a specific pass is disabled, it's completely gone to save resources.
+Le chemin de rendu est construit lorsque le jeu lui-même est compilé. Lorsqu'un laissez-passer spécifique est désactivé, il n'y a plus rien à faire pour économiser les ressources.
 
-## Extending compositor
 
-If possible, perform additional post processing directly in compositor. This way everything is kept in a single pass. See [LUT-based-color-grading](https://github.com/armory3d/armory/commit/42b0aaadeda67b2eabde0344ebbb100f18bd8e0d). It is possible to access pre-tonemaped color, depth, normals,..
+## Extension du compositor
 
-## Adding post-processing pass
+Si possible, effectuez un post-traitement supplémentaire directement dans le compositeur. De cette façon, tout est conservé en un seul passage. Voir[LUT-based-color-grading](https://github.com/armory3d/armory/commit/42b0aaadeda67b2eabde0344ebbb100f18bd8e0d). Il est possible d'accéder à aux pre-tonemaped color, depth, normals,....
 
-For effects which do not fit into a single pass
+## Ajout d'une passe de post-traitement
 
-- In [make_renderpath.py](https://github.com/armory3d/armory/blob/master/blender/arm/make_renderpath.py) - include additonal shader files(`assets.add_shader_pass()`) and add defines(`assets.add_khafile_def()`)
+Pour les effets qui ne rentrent pas dans une seul passe.
 
-- In [RenderPathCreator.hx](https://github.com/armory3d/armory/blob/master/Sources/armory/renderpath/RenderPathCreator.hx) - load shaders (`path.loadShader()`), create render targets(`path.createRenderTarget()`) and [add new commands](https://github.com/armory3d/armory/blob/master/Sources/armory/renderpath/RenderPathCreator.hx#L891)
+- Dans [make_renderpath.py](https://github.com/armory3d/armory/blob/master/blender/arm/make_renderpath.py) - inclure des fichiers de shader supplémentaires (`assets.add_shader_pass()`) et ajouter des définitions (`assets.add_khafile_def()`)
+
+- Dans [RenderPathCreator.hx](https://github.com/armory3d/armory/blob/master/Sources/armory/renderpath/RenderPathCreator.hx) - chargez les shaders (`path.loadShader()`), créer des cibles de rendu (`path.createRenderTarget()`) et [ajouter des nouvelles commandes](https://github.com/armory3d/armory/blob/master/Sources/armory/renderpath/RenderPathCreator.hx#L891)
 
 ```hx
 #if rp_custom_pass
@@ -42,13 +43,13 @@ For effects which do not fit into a single pass
 
 ## Custom geometry pass
 
-See [material_shaders](https://github.com/armory3d/armory_examples/tree/master/material_shaders) example.
+Voir l'exemple du [material_shaders](https://github.com/armory3d/armory_examples/tree/master/material_shaders).
 
-- Create new [material definition](https://github.com/armory3d/armory_examples/blob/master/material_shaders/Bundled/MyMaterial/MyMaterial.arm) in `blend_root/Bundled/your_material`
-- In Blender, select material and set `Properties - Material - Armory Props - Custom Material` to `your_material`
-- Create `your_material.vert.glsl` and `your_material.frag.glsl` shaders (.geom, .tesc, .tese are optional) in `blend_root/Shaders`
+- Créer un nouveau [material definition](https://github.com/armory3d/armory_examples/blob/master/material_shaders/Bundled/MyMaterial/MyMaterial.arm) in `blend_root/Bundled/your_material`
+- Dans Blender, sélectionnez le matériau et réglez `Properties - Material - Armory Props - Custom Material` a `your_material`
+- Créez `your_material.vert.glsl` et `your_material.frag.glsl` shaders (.geom, .tesc, .tese are optional) dans `blend_root/Shaders`
 
-### Forward
+### Au-delà
 
 Minimal vertex shader:
 
@@ -72,9 +73,9 @@ void main() {
 }
 ```
 
-### Deferred
+### Différé
 
-For deferred renderer, we need to encode fragment shader output into gbuffer layout.
+Pour le rendu différé, nous avons besoin d'encoder la sortie du fragment shader dans la mise en mémoire tampon.
 
 Minimal vertex shader:
 
@@ -114,9 +115,9 @@ void main() {
 }
 ```
 
-## Writing custom render path
+## Ecriture d'un chemin de rendu personnalisé
 
-Create a new `blend_root/Sources/arm/renderpath/RenderPathCreator.hx`. This will make Armory overwrite the internal render path with your own.
+Créer un nouveau `blend_root/Sources/arm/renderpath/RenderPathCreator.hx`. Ceci fera en sorte qArmory écrase le chemin de rendu interne avec le vôtre.
 
 ```hx
 package arm.renderpath;
@@ -135,4 +136,4 @@ class RenderPathCreator {
 }
 ```
 
-It is also possible to replace/manipulate render path at runtime using the `iron.RenderPath.setActive(path)` command.
+Il est également possible de remplacer/manipuler le chemin de rendu au moment de l'exécution en utilisant la commande `iron.RenderPath.setActive(path)`.
