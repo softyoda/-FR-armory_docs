@@ -4,9 +4,9 @@ Cette page présente un guide de démarrage rapide pour vous permettre de config
 
 Armory dispose d'une technique d'illumination globale entièrement dynamique basée sur une combinaison du voxel cone-tracing et du screen-space ray-tracing. Tout d'abord, la scène est voxélisée et transformée en une texture 3D. Ces données sont ensuite utilisées pour obtenir un éclairage grossier de la scène. Ensuite, le traçage de l'espace-écran est effectué pour les détails.
 
-(https://github.com/armory3d/armory_examples/tree/master/voxelgi_teapots) (troll non inclus !).
+- Téléchargez la [scène](https://github.com/armory3d/armory_examples/tree/master/voxelgi_teapots) (troll non inclus !).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay ; encrypted-media" allowfullscreen></iframe></iframe>>.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay ; encrypted-media" allowfullscreen></iframe>
 
 ## Exigences
 
@@ -41,7 +41,7 @@ Voxel GI permet **l'éclairage diffus et spéculaire**. Il s'agit toujours d'une
 - Changez les paramètres de traçage en utilisant les propriétés `Step, Range, Offset`.
 - Changez la contribution de l'environement map aux lumières indirectes à l'aide de la propriété `Env Map`.
 
-<img src="./graphics/img/gi/game.jpg" width="50%">">".
+<img src="./graphics/img/gi/game.jpg" width="50%">
 
 ## Voxel Volume Setup
 

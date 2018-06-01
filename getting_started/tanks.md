@@ -38,8 +38,6 @@ En sélectionnant le tank rouge, un objet vide est ajouté en tant qu'enfant - l
 
 ![](./getting_started/img/tanks/7.jpg)
 
-We attach another logic tree - handling response to the **'fire'** event. We spawn a new object - our bullet model from layer 2, and set its location to the logic tree owner - in this case a bullet spawn point - defined as an empty object placed as a child of tank.
-
 Nous attachons un autre arbre logique - gérer la réponse à l'événement **'fire'**. Nous créons un nouvel objet - notre modèle de balle du layer 2, et plaçons son emplacement au propriétaire de l'arbre logique - dans ce cas le point de spawn de la balle - défini comme un objet vide placé comme un enfant de tank.
 
 ![](./getting_started/img/tanks/8.jpg)
