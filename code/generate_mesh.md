@@ -103,4 +103,4 @@ class BoxGenerator extends iron.Trait {
 Appuyer sur **Play in Viewport** pour vérifier le [résultat](http://armory3d.org/demo/generate_mesh) !
 ![](/code/img/generate_mesh/2.jpg)
 
-Obtenez le fichier .blend sur[GitHub](https://github.com/armory3d/armory_examples/tree/master/script_genmesh).
+Obtenez le fichier .blend sur [GitHub](https://github.com/armory3d/armory_examples/tree/master/script_genmesh).

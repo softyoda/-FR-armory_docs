@@ -2,7 +2,7 @@
 
 ![](/code/img/wasm/0.jpg)
 
-Note : Cette fonctionnalité nécessite armory 0.4/git. Utilisez[Armory Updater](http://armory3d.org/manual/#/dev/gitversion) pour l'obtenir maintenant.
+Note : Cette fonctionnalité nécessite armory 0.4/git. Utilisez [Armory Updater](http://armory3d.org/manual/#/dev/gitversion) pour le télécharger maintenant.
 
 ## Intro
 

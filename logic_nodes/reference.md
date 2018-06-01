@@ -42,11 +42,12 @@ Active les node\(s\) qui y sont connectés à chaque image.
 L'entrée objet inférieure est utilisée comme volume, l'entrée objet supérieure comme entrée objet pour l'objet qui entre, quitte ou chevauche avec lui. 
 
 
-Enter-mode: Active les nœuds connectés sur le cadre, l'objet entre dans le volume, sur tous les autres cadres, il ne le fait pas.
+Enter-mode : Sorties vrai sur le frame l'objet entre dans le volume, sur toutes les autres frames il sort faux.
 
-Leave-mode: Active les nœuds connectés sur le cadre, l'objet quitte le volume, sur tous les autres cadres, il ne le fait pas.
+Leave-mode : Sorties vrai sur le cadre l'objet quitte le volume, sur toutes les autres frames il sort faux.
 
-Overlap-mode: Active les nœuds connectés sur le cadre, l'objet chevauche le volume, mais sur tous les autres cadres, il ne le fait pas.
+Overlap-mode : Sorties vrai sur les frames l'objet chevauche le volume, sur toutes les autres frames il sort faux.
+
 
 ![](/assets/on-volume-trigger.JPG)
 
@@ -55,14 +56,14 @@ Overlap-mode: Active les nœuds connectés sur le cadre, l'objet chevauche le vo
 
 ### Alternate
 
-Alterne entre ses sorties activées pour passer par son entrée lorsqu'elle est réactivée.  
+Alterne entre ses sorties.
 
 ![](/assets/Alternate.JPG)
 
 
 ### Gate
 
-Les nœuds logiques permettent de faire des instructions "if". Lorsqu'elle est activée, elle compare si ses deux entrées sont égales, plus grandes égales, moins égales ou non égales, quel que soit le type de variable, et passe par son entrée rouge si l'état de l'ensemble est le cas.
+Les nodes logiques permettent de faire des instructions "if". Lorsqu'elle est activée, elle compare si ses deux entrées sont égales, plus grandes égales, moins égales ou non égales, quel que soit le type de variable, et passe par son entrée rouge si l'état de l'ensemble est le cas.
 
 "And" et "Or" ne sont utilisés que pour les bools, et passent par l'entrée lorsque les deux bools sont vrais (And) ou au moins un (Or).
 
@@ -78,7 +79,7 @@ Inverse le booléen branché, donc si son entrée est "true" il sort "false".
 
 ### Sleep
 
-Active le node connecté avec sa sortie après la valeur flottante en secondes après qu'il a été activé lui-même.
+Active le node connecté avec sa sortie après la valeur en secondes après qu'il a été activé lui-même.
 
 ![](/assets/sleep.JPG)
 
@@ -303,6 +304,6 @@ Déplace l'objet défini à chaque fois qu'il est activé par le vecteur donné.
 
 Lorsqu'il est activé, définit ou met à jour une Propriété de l'objet donné nommé d'après son entrée de chaîne de caractères à la Valeur de son entrée de Variable générale \(la verte\). Vous n'avez pas à vous soucier du type variable, vous pouvez tout brancher à part les activations. 
 
-Ce nœud peut être utilisé pour partager des Variables entre différents Traits. Si le trait\(s\) avec lequel vous voulez accéder à la variable se trouve sur différents objets, utilisez le noeud "[Global Object](/logic-nodes/global-object.md)" pour stocker les données. Chaque trait de caractère peut accéder à celui-ci.
+Ce node peut être utilisé pour partager des Variables entre différents Traits. Si le trait\(s\) avec lequel vous voulez accéder à la variable se trouve sur différents objets, utilisez le noeud "[Global Object](/logic-nodes/global-object.md)" pour stocker les données. Chaque trait de caractère peut accéder à celui-ci.
 
 ![](/assets/set-property.JPG)
