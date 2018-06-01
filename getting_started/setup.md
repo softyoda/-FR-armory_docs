@@ -1,13 +1,11 @@
 # Installation
 
-Armory bundle comes with everything you need. **Blender 2.79** is used with **Armory player** built in. **Blender 2.8** builds are currently experimental. Armory sources are available at [GitHub](https://github.com/armory3d/).
-
 Armory est livrée avec tout ce dont vous avez besoin. **Blender 2.79** est utilisé avec **Armory player** intégré. Les versions 2.8** de Blender 2.8** sont actuellement expérimentales. Les sources d'Armory sont disponibles sur [GitHub](https://github.com/armory3d/).
 
 - Décompressez  **Armory_version.zip** à l'endroit de votre choix. *(Sous Windows, préférez un chemin court comme 'C:\Dev' ou décompressez avec [7-zip](http://www.7-zip.org) pour éviter de longues erreurs de parcours et accélérer l'extraction.)*
 - Exécutez Blender situé dans le SDK dézipper. *(Sous Windows, il se peut que vous ayez besoin de l'activer pour la première fois en cliquant sur **Plus d'information** - **Passer ** (More info - Run anyway**.)*
 
-<img src="https://github.com/softyoda/armory_docs/blob/master/getting_started/img/winrun.png" width="50%">
+<img src="./getting_started/img/winrun.png" width="50%">
 
 - Pour vérifier que tout fonctionne correctement, enregistrez votre fichier .blend, passez au moteur `Cycles Render` ou `Eevee` (en utilisant un menu déroulant situé dans l'en-tête info) et appuyez sur le bouton **Play in Viewport** (P), situé dans l'en-tête de la vue 3D.
 
