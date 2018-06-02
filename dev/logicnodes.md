@@ -70,8 +70,6 @@ https://github.com/armory3d/armory_examples/tree/master/dev_logicnode
 
 Lors de l'implémentation de nouveaux nodes logiques, il est facile de parcourir les sources des nodes existants comme référence.
 
-- Définitions Python des nodes d'Armory :
-https://github.com/armory3d/armory/tree/master/blender/arm/logicnode
+- Définitions Python des nodes d'Armory : https://github.com/armory3d/armory/tree/master/blender/arm/logicnode
 
- - Equivalents Haxe :
-https://github.com/armory3d/armory/tree/master/Sources/armory/logicnode
+- Equivalents Haxe : https://github.com/armory3d/armory/tree/master/Sources/armory/logicnode

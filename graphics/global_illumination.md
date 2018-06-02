@@ -6,7 +6,7 @@ Armory dispose d'une technique d'illumination globale entièrement dynamique bas
 
 - Téléchargez la [scène](https://github.com/armory3d/armory_examples/tree/master/voxelgi_teapots) (troll non inclus !).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay ; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8KavBpfLLtY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Exigences
 
@@ -28,7 +28,7 @@ La façon la moins chère d'utiliser les voxels, utilisable pour **l'occlusion a
 - Contrôler l'intensité à l'aide de la propriété `Occlusion`.
 - Changez les paramètres de traçage en utilisant les propriétés `Step, Range, Offset`.
 
-<img src="./graphics/img/img/gi/ao.jpg" width="50%">">".
+<img src="./graphics/img/gi/ao.jpg" width="50%">
 
 ## Voxel GI
 

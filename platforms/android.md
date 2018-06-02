@@ -1,6 +1,6 @@
 # Déploiement sur Android
 
-Avant d'exécuter sur un appareil mobile, assurez-vous que le projet est optimisé pour fonctionner sans problème sur le matériel cible. Il est recommandé de sélectionner *Mobile* prédéfini dans *Properties - Render - Armory Render Path*. De plus, il peut être nécessaire de simplifier **les matériaux, les textures et la géométrie**. Pour utiliser la résolution inférieure à la résolution maximale disponible, définissez la propriété *Armory Render Path - Resolution*.
+Avant d'exécuter sur un appareil mobile, assurez-vous que le projet est optimisé pour fonctionner sans problème sur l'appareil cible. Il est recommandé de sélectionner *Mobile* prédéfini dans *Properties - Render - Armory Render Path*. De plus, il peut être nécessaire de simplifier **les matériaux, les textures et la géométrie**. Pour utiliser la résolution inférieure à la résolution maximale disponible, définissez la propriété *Armory Render Path - Resolution*.
 
 ## Natif (C+++)
 
