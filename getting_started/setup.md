@@ -12,7 +12,7 @@ Armory est livrée avec tout ce dont vous avez besoin.
 - Pour vérifier que tout fonctionne correctement, enregistrez votre fichier .blend, passez au moteur `Cycles Render` ou `Eevee` (en utilisant un menu déroulant situé dans l'en-tête info) et appuyez sur le bouton `Play` (F5), situé dans le panneau `Properties - Render - Armory Player`.
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4FPKCUYjpP0?rel=0 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4FPKCUYjpP0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 - Continuer vers le  [Playground tutorial](./getting_started/playground.md) pour en savoir plus. Si vous avez du mal à mettre les choses en place, faites en nous part sur le [forum](http://armory3d.org/community.html) ou sur le [discord](https://discord.gg/tpMbh2C)!
 

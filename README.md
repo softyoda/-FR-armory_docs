@@ -6,6 +6,8 @@
 
 *Armory n'est pas encore prêt pour la production, veuillez lire ce manuel avant de commencer. Nous sommes toujours à la recherche d'autres commentaires - faites-nous part des problèmes que vous rencontrez sur [GitHub](https://github.com/armory3d/armory/issues).*.
 
+
+Voir la documentation en [HTML](https://softyoda.github.io/FR_armory_docs/).
 ---
 
 Armory SDK peut être utiliser sur **Windows**, **Linux** et **macOS**. Les projets peuvent être déployés sur ordinateur, mobile, web et consoles.
