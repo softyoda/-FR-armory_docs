@@ -49,6 +49,44 @@ Sélectionnez le cube et naviguez jusqu'à `Properties - Object - Armory Traits`
 - Example sur [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/c_trait)
 
 
+## Programmez Armory en Rust
+
+
+Comme dans l'exemple précédent, la rotation d'un cube en `Rust`.
+
+```rust
+extern {
+  fn notify_on_update(f: extern fn() -> ()) -> ();
+  fn get_object(name: *const i8) -> i32;
+  fn set_transform(object: i32, x: f32, y: f32, z: f32, rx: f32, ry: f32, rz: f32, sx: f32, sy: f32, sz: f32) -> ();
+}
+
+#[no_mangle]
+pub extern "C" fn update() -> () {
+  unsafe {
+    let name = std::ffi::CString::new("Cube").unwrap();
+    let object = get_object(name.as_ptr());
+    static mut rot: f32 = 0.1;
+    rot += 0.01;
+    set_transform(object, 0.0, 0.0, 0.0, 0.0, 0.0, rot, 1.0, 1.0, 1.0);
+  }
+}
+
+#[no_mangle]
+pub extern "C" fn main() -> i32 {
+  unsafe {
+    notify_on_update(update);
+  }
+  return 0;
+}
+```
+
+Vous pouvez compiler cette source de `Rust` dans `Wasm` en direct sur [webassembly.studio](https://webassembly.studio/?f=qi0imd4j9t).
+
+
+- Example sur [GitHub](https://github.com/armory3d/armory_examples/tree/master/web_assembly/rust_trait)
+
+
 ## Appel Wasm depuis Haxe.
 
 Pour encore plus de flexibilité, le " wasm " peut être appelé directement à partir d'un trait écrit en " Haxe ". Commencez par une simple fonction "C" :
