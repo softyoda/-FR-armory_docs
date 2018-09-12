@@ -1,6 +1,5 @@
 # Machine Learning
 
-Note : Cette fonctionnalité nécessite armory 0.4/git. Utilisez [Armory Updater](http://armory3d.org/manual/#/dev/gitversion) pour le télécharger maintenant.
 
 ## Intro
 

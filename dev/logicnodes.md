@@ -43,7 +43,7 @@ Redémarrer Blender et charger à nouveau le projet, le nouveau node logique est
 
 Avant que le projet puisse être exécuté, nous avons besoin d'implémenter la logique de node réelle dans Haxe. Lorsque le node est exécuté, nous lui permettons d'afficher un 'Hello, World!' !
 
-```hx
+```haxe
 package armory.logicnode;
 
 class TestNode extends LogicNode {
@@ -67,6 +67,10 @@ class TestNode extends LogicNode {
 
 - Exemple de projet:
 https://github.com/armory3d/armory_examples/tree/master/dev_logicnode
+
+- Example lors de l'ajout d'un node `Contains String' dans Armory:
+https://github.com/armory3d/armory/commit/094c0e9597023025eca525d173e6f6d29b5201b6
+
 
 Lors de l'implémentation de nouveaux nodes logiques, il est facile de parcourir les sources des nodes existants comme référence.
 

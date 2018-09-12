@@ -23,3 +23,18 @@ Lorsque vous utilisez une heightmap, vous pouvez placer un node `Armory PBR` et 
 Examples:
 - https://github.com/armory3d/armory_examples/tree/master/material_displace
 - https://github.com/armory3d/armory_examples/tree/master/material_tessellation
+
+## Blending
+
+
+Pour activer le mélange additif pour un matériau spécifique, réglez `Armory Render Path - Blending` sur `On` et cochez la propriété `Blending` dans `Material - Armory Props`.
+
+Exemples :
+- https://github.com/armory3d/armory_examples/blob/master/particles/particle_info.blend
+
+## Paramètres des matériaux
+
+Les nodes `RGB`, `Value` et `Image Texture` peuvent être contrôlés au moment de l'exécution à l'aide de nodes script ou logiques. Pour exposer le node matériel, activez la propriété `Parameter` dans `Node Editor - Properties - Armory Material Node`.
+
+Exemples :
+- https://github.com/armory3d/armory_examples/tree/master/material_params

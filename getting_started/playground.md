@@ -130,6 +130,8 @@ Chaque nodes doit être attaché à un objet. Sélectionnez Cylindre et créez u
 
 <a href="./getting_started/img/playground/12.jpg">![](./getting_started/img/playground/12.jpg)</a>
 
+Remarque : Pour voir la sortie de node `Print', activez `Armory Project - Debug Console'.
+
 ### Haxe Scripts
 
 Nous pouvons programmer les caractéristiques de l'objet directement en utilisant le langage de programmation `Haxe`. Créons un trait qui donne naissance à une case après avoir appuyé sur une touche.

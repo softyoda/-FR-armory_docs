@@ -14,7 +14,13 @@ Armory est livrée avec tout ce dont vous avez besoin.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4FPKCUYjpP0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-- Continuer vers le  [Playground tutorial](./getting_started/playground.md) pour en savoir plus. Si vous avez du mal à mettre les choses en place, faites en nous part sur le [forum](http://armory3d.org/community.html) ou sur le [discord](https://discord.gg/tpMbh2C)!
+
+## Dépannage
+
+- Pour les anciennes cartes graphiques, sélectionnez le préréglage `Low` dans `Blender - Properties - Render - Armory Render Path`.
+- Lorsque vous nommez des choses, préférez les lettres alphabétiques non accentuées `A-Z`.
+- Si vous souhaitez isoler la configuration pour le Blender fourni, créez le dossier `config` vide dans `Armory/2.80`.
+- Si vous avez du mal à mettre les choses en place, faites en nous part sur le [forum](http://armory3d.org/community.html) ou sur le [discord](https://discord.gg/M6yMcE2)!
 
 - Les sources sont disponibles à l'adresse[GitHub](https://github.com/armory3d/).
 
@@ -26,7 +32,7 @@ Si vous n'avez pas besoin du lecteur intégré, Armory peut être utilisé comme
 - [Téléchargez](http://armory3d.org/download.html) et décompressez le SDK approprié pour votre plate-forme.
 - Dans Blender, sélectionnez  **File** - **User Preferences...** et naviguer jusqu'à l'onglet **Add-ons**.
 - Cliquez sur **Install from File...**
-- Séléctionnez `armory.py` dans `my_unpacked_sdk/Armory/armsdk/armory/blender/addon` (sur MacOS l'emplacement est `my_unpacked_sdk/Armory/Blender.app/armsdk/armory/blender/addon`)
-- **Activez** l'add-on
-- Définissez **l'emplacement du SDK** sur `my_unpacked_sdk/Armory/armsdk`
+- Séléctionnez `armory.py` dans `my_unpacked_sdk/Armory/armsdk/armory/blender/addon` (sur MacOS l'emplacement est `my_unpacked_sdk/Armory/Blender.app/armsdk/armory/blender/addon`).
+- **Activer** l'add-on Armory.
+- Définissez **l'emplacement du SDK** sur `my_unpacked_sdk/Armory/armsdk` .
 - Appuyez sur **Save User Settings** en bas et redémarrer Blender. C'est tout !

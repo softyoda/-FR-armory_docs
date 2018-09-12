@@ -2,7 +2,6 @@
 
 ![](/code/img/wasm/0.jpg)
 
-Note : Cette fonctionnalité nécessite armory 0.4/git. Utilisez [Armory Updater](http://armory3d.org/manual/#/dev/gitversion) pour le télécharger maintenant.
 
 ## Intro
 
@@ -31,6 +30,7 @@ void update() {
 	set_transform(get_object("Cube"), 0, 0, 0, 0, 0, rot, 1, 1, 1); // Set cube rotation
 }
 
+// Inclure la fonction principale, Armory l'appelle quand le trait est instancié.
 WASM_EXPORT
 int main() {
 	notify_on_update(update); // Register callback

@@ -13,7 +13,7 @@ Sélectionnez Caméra et attachez un nouveau trait de caractère à l'aide de **
 
 Appuyez sur **Edit Script** pour ouvrir notre nouveau script de trait de caractère dans **Kode Studio**. L'exemple de code ci-dessous générera une boîte simple, attachera un trait de corps rigide et le reproduira sur le plan après avoir appuyé sur l'entrée.
 
-```hx
+```haxe
 package arm;
 
 import iron.Scene;

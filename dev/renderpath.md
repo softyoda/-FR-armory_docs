@@ -19,7 +19,7 @@ Pour les effets qui ne rentrent pas dans une seul passe.
 
 - Dans [RenderPathCreator.hx](https://github.com/armory3d/armory/blob/master/Sources/armory/renderpath/RenderPathCreator.hx) - chargez les shaders (`path.loadShader()`), créer des cibles de rendu (`path.createRenderTarget()`) et [ajouter des nouvelles commandes](https://github.com/armory3d/armory/blob/master/Sources/armory/renderpath/RenderPathCreator.hx#L891)
 
-```hx
+```haxe
 #if rp_custom_pass
 {
 	// Draw into helper 'buf' render target
@@ -119,7 +119,7 @@ void main() {
 
 Créer un nouveau `blend_root/Sources/arm/renderpath/RenderPathCreator.hx`. Ceci fera en sorte qArmory écrase le chemin de rendu interne avec le vôtre.
 
-```hx
+```haxe
 package arm.renderpath;
 
 class RenderPathCreator {

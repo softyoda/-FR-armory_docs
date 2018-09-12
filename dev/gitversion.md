@@ -35,5 +35,5 @@ git pull origin master
 
 ### Pour aller plus loin:
 
-- Vous pouvez reconstruire Krom : https://github.com/Kode/Krom
-- Vous pouvez reconstruire Blender lui-même avec Krom intégré : https://github.com/armory3d/krom_blender
+- Build Krom : https://github.com/Kode/Krom
+- Build Blender avec Krom intégré : https://github.com/armory3d/krom_blender
